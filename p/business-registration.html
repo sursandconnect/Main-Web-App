@@ -69,7 +69,7 @@
 </main>
 <nav class="bottom"><a href="../">⌂<span>Home</span></a><a href="businesses.html">🏪<span>Shop</span></a><a href="services.html">🛠️<span>Services</span></a><a href="events.html">📅<span>Events</span></a><a href="settings.html">☰<span>Menu</span></a></nav>
 <script>
-const API="https://script.google.com/macros/s/AKfycbyjTV3BcPjYhXEDFlRhw0P-ZNDR7_k47N3emxak9ccgB2iHjUadognpyWUTBaZe07bu/exec";
+const API="https://script.google.com/macros/s/AKfycbwpMVP0rN61F7uVL1znqycdLCZ-Dlz7TWnHT9VdVjmXYFoTbJM48DN6clKN6SmSxRX2/exec";
 function fileData(file){return new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result);r.onerror=rej;r.readAsDataURL(file)})}
 async function post(data){const r=await fetch(API,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(data)});const x=await r.json();if(!x||!x.success)throw Error(x&&x.error?x.error:'Submission failed.');return x}
 function showChoice(){choice.style.display='grid';businessWrap.classList.remove('open');serviceWrap.classList.remove('open')}

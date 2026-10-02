@@ -30,7 +30,7 @@
 </main>
 <div class="modal" id="editorModal"><div class="dialog"><div class="dialoghead"><h3 id="editorTitle">Add Record</h3><button class="close" onclick="editorModal.classList.remove('active')">×</button></div><form id="editorForm" class="editor" onsubmit="return saveRecord(event)"></form></div></div>
 <script>
-const API='https://script.google.com/macros/s/AKfycbyjTV3BcPjYhXEDFlRhw0P-ZNDR7_k47N3emxak9ccgB2iHjUadognpyWUTBaZe07bu/exec',TOKEN_KEY='scAdminSessionToken',EXP_KEY='scAdminSessionExpiresAt';
+const API='https://script.google.com/macros/s/AKfycbwpMVP0rN61F7uVL1znqycdLCZ-Dlz7TWnHT9VdVjmXYFoTbJM48DN6clKN6SmSxRX2/exec',TOKEN_KEY='scAdminSessionToken',EXP_KEY='scAdminSessionExpiresAt';
 let token=localStorage.getItem(TOKEN_KEY)||'',section='',rows=[],editing=null,adminWard='';
 function post(p){return fetch(API,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(p)}).then(r=>r.text()).then(t=>{let x;try{x=JSON.parse(t)}catch(e){throw Error('Invalid server response.')}if(!x||x.success!==true)throw Error(x&&x.error?x.error:'Request failed.');return x})}
 function esc(v){return String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
