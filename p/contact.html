@@ -1,0 +1,2322 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#e97712"><title>Contact | Sursand Connect</title><link rel="manifest" href="../manifest.webmanifest"><style>
+:root{--sc-saffron:#f28c28;--sc-saffron-dark:#d86f0d;--sc-green:#238b45;--sc-text:#263238;--sc-bg:#f8fafc;--sc-card:#fff;--sc-border:#e6ebe7}
+html,body{margin:0;background:var(--sc-bg);color:var(--sc-text)}body{padding-top:66px;padding-bottom:118px;transition:background .2s,color .2s}.sc-appbar{position:fixed;top:0;left:0;right:0;height:58px;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);border-bottom:1px solid #eceff1;box-shadow:0 5px 18px rgba(15,23,42,.08);display:flex;align-items:center;justify-content:space-between;padding:4px 12px;z-index:999999;font-family:Arial,sans-serif}.sc-appbar-left{display:flex;align-items:center;gap:8px;min-width:0}.sc-back{width:38px;height:38px;border:1px solid #f2d5b6;background:linear-gradient(145deg,#fff8f0,#fff0dd);color:#c86508;border-radius:14px;font-size:21px;font-weight:900;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(200,101,8,.10);cursor:pointer}.sc-appbar-brand{display:flex;gap:9px;align-items:center;text-decoration:none;color:#263238;min-width:0}.sc-appbar-brand img{width:41px;height:41px;object-fit:contain;border-radius:12px;box-shadow:0 3px 10px rgba(15,23,42,.08)}.sc-appbar-brand span{display:flex;flex-direction:column;line-height:1.08;min-width:0}.sc-appbar-brand b{font-size:14px;white-space:nowrap}.sc-appbar-brand small{font-size:9px;color:#667085;margin-top:3px;white-space:nowrap}.sc-appbar-actions{display:flex;gap:6px}.sc-appbar-actions a,.sc-appbar-actions button{width:36px;height:36px;border-radius:12px;border:1px solid #f0d7bd;background:#fff7ed;color:#c86508;font-weight:900;font-size:17px;display:flex;align-items:center;justify-content:center;text-decoration:none;cursor:pointer;position:relative}.sc-bell-dot{position:absolute;top:6px;right:6px;width:7px;height:7px;background:#dc2626;border:2px solid #fff;border-radius:50%}.sc-bottom{position:fixed;bottom:0;left:0;right:0;height:64px;background:linear-gradient(135deg,#f7a13f,#f28c28 52%,#e97812);backdrop-filter:blur(10px);border-top:1px solid #e6e9ec;display:grid;grid-template-columns:repeat(5,1fr);z-index:999999;box-shadow:0 -5px 18px rgba(15,23,42,.07);font-family:Arial,sans-serif}.sc-bottom a{text-decoration:none;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:18px;gap:1px}.sc-bottom a span{font-size:8px;font-weight:800}.sc-bottom a:hover,.sc-bottom a:active{color:#fff;background:rgba(255,255,255,.12)}.sc-bottom .sc-menu-lines{font-size:21px;line-height:1;font-weight:900}.sc-menu-sheet{display:none;position:fixed;inset:0;background:rgba(15,23,42,.45);z-index:1000000;align-items:flex-end;justify-content:center}.sc-menu-sheet.active{display:flex}.sc-menu-panel{width:min(560px,100%);max-height:82vh;overflow:auto;background:var(--sc-card);border-radius:24px 24px 0 0;padding:12px 14px 24px;box-shadow:0 -16px 40px rgba(15,23,42,.22);font-family:Arial,sans-serif}.sc-menu-handle{width:46px;height:4px;border-radius:999px;background:#d7dce0;margin:0 auto 12px}.sc-menu-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.sc-menu-head h3{margin:0;font-size:16px}.sc-menu-close{width:34px;height:34px;border:0;border-radius:10px;background:#f1f5f3;font-size:18px}.sc-menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.sc-menu-card{border:1px solid var(--sc-border);background:#fff;border-radius:15px;padding:13px;text-decoration:none;color:#263238;box-shadow:0 5px 14px rgba(15,23,42,.06);font-size:11px;font-weight:800}.sc-menu-card span{display:block;font-size:20px;margin-bottom:5px}.sc-menu-full{grid-column:1/-1}.sc-setting-row{display:flex;justify-content:space-between;align-items:center;gap:12px;border:1px solid var(--sc-border);background:#fff;border-radius:15px;padding:12px;margin-top:10px}.sc-setting-row label{font-size:11px;font-weight:800}.sc-setting-row select,.sc-setting-row button{border:1px solid #e0e5e2;background:#f8faf8;border-radius:10px;padding:8px 10px;font-size:10px}.sc-login-btn{width:100%;margin-top:12px;border:0;border-radius:13px;background:linear-gradient(135deg,#f7a13f,#f28c28,#e97812);color:#fff;padding:12px;font-weight:900}.sc-dark body{background:#0f172a;color:#e5e7eb}.sc-dark .sc-appbar,.sc-dark .sc-bottom,.sc-dark .sc-menu-panel{background:#111827;color:#f8fafc;border-color:#263244}.sc-dark .sc-appbar-brand{color:#fff}.sc-dark .sc-appbar-brand small{color:#a9b2c2}.sc-dark .sc-menu-card,.sc-dark .sc-setting-row{background:#1f2937;color:#fff;border-color:#374151}.sc-dark [class*="card"],.sc-dark [class*="panel"]{border-color:#374151}.sc-dark .sc-appbar-actions a,.sc-dark .sc-appbar-actions button,.sc-dark .sc-back{background:#2a2119;color:#ffb86b;border-color:#70451e}.sc-dark main{color:#e5e7eb}.sc-dark main [class*="card"],.sc-dark main [class*="panel"],.sc-dark main [class*="dialog"],.sc-dark main [class*="modal-content"],.sc-dark main [class*="body"]{background-color:#111827!important;color:#e5e7eb!important;border-color:#374151!important}.sc-dark main h1,.sc-dark main h2,.sc-dark main h3,.sc-dark main h4{color:#f8fafc}.sc-dark main p,.sc-dark main [class*="info"],.sc-dark main [class*="muted"],.sc-dark main [class*="subtitle"],.sc-dark main [class*="description"]{color:#cbd5e1}.sc-dark input,.sc-dark textarea,.sc-dark select{background:#1f2937!important;color:#f8fafc!important;border-color:#475569!important}@media(min-width:900px){body{padding-bottom:0}.sc-bottom{display:none}}
+/* v10.4 green bottom */
+.sc-bottom{background:linear-gradient(135deg,#34a853,#238b45 52%,#176b35)!important}
+</style><script>
+function scRootUrl(){return new URL('../',location.href).href;}
+function scShareApp(){const data={title:'Sursand Connect',text:'Sursand Connect - Your local digital community for Sursand.',url:scRootUrl()};if(navigator.share){navigator.share(data).catch(()=>{});}else{window.open('https://wa.me/?text='+encodeURIComponent(data.text+'\n\n'+data.url),'_blank');}}
+function scGoBack(){if(history.length>1){history.back()}else{location.href='../'}}
+function scOpenMenu(){document.getElementById('scMenuSheet').classList.add('active')}
+function scCloseMenu(){document.getElementById('scMenuSheet').classList.remove('active')}
+function scSetTheme(v){localStorage.setItem('scTheme',v);scApplyPrefs()}
+function scSetLanguage(v){localStorage.setItem('scLanguage',v);scApplyPrefs()}
+function scApplyPrefs(){
+ const theme=localStorage.getItem('scTheme')||'light';
+ document.documentElement.classList.toggle('sc-dark',theme==='dark');
+ const lang=localStorage.getItem('scLanguage')||'en';
+ document.documentElement.lang=lang;
+ document.querySelectorAll('[data-en][data-hi]').forEach(el=>{
+   const en=el.getAttribute('data-en'),hi=el.getAttribute('data-hi');
+   if(el.tagName==='INPUT'||el.tagName==='TEXTAREA'){el.placeholder=lang==='hi'?hi:en}
+   else el.textContent=lang==='hi'?hi:en;
+ });
+ const ts=document.getElementById('scThemeSelect');if(ts)ts.value=theme;
+ const ls=document.getElementById('scLanguageSelect');if(ls)ls.value=lang;
+}
+document.addEventListener('DOMContentLoaded',scApplyPrefs);
+</script>
+<style>
+.sc-pretty-back{
+  width:40px!important;height:40px!important;border-radius:14px!important;
+  border:1px solid #f2d1ac!important;
+  background:linear-gradient(145deg,#fffaf5,#fff0dd)!important;
+  color:#c86508!important;
+  box-shadow:0 5px 14px rgba(200,101,8,.14)!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  padding:0!important;transition:.18s ease!important;
+}
+.sc-pretty-back:active{transform:scale(.94)!important}
+body{padding-bottom:126px!important}
+main{padding-bottom:54px!important}
+@media(min-width:900px){body{padding-bottom:30px!important}}
+</style>
+<script src="../app-data.js"></script></head><body>
+<div class="sc-appbar">
+<div class="sc-appbar-left">
+  <a href="../" class="sc-appbar-brand">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgM6ePTCVaqvhVtE9SqPzEyzrYrHjo0MlxUbzHS1D8ORCNX_at01YJcY6a7ltTxA2AaYEuojBw-VotVudZXLNUHVSs6xQvLX6zbNBh-bVnm0v6gURU0yStk_fObHB9rGNwbkf2v_GTyAmcwAG0m8srp0at1riLJSCvOLU3kFneNoNlX-C1XLbioi4RtmDfU/s1600/IMG_20260820_101456.png" alt="Sursand Connect">
+    <span><b>Sursand Connect</b><small data-en="Your Local Digital Community" data-hi="आपका स्थानीय डिजिटल समुदाय">Your Local Digital Community</small></span>
+  </a>
+</div>
+<div class="sc-appbar-actions">
+  <a href="notifications.html" aria-label="Notifications" title="Notifications">🔔<i class="sc-bell-dot"></i></a>
+  <button class="sc-back sc-pretty-back" onclick="history.length>1?history.back():location.href='../'" aria-label="Back" title="Back">
+<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+</div>
+</div>
+<main style="padding-bottom:44px"><!-- =========================================================
+     POST 23 — CONTACT US
+     SURSAND CONNECT
+     FULL REPLACEMENT
+
+     CONTACT DETAILS
+     ---------------------------------------------------------
+     Office:
+     Sewangan Charitable Trust
+
+     Phone:
+     +91 6203302027
+
+     WhatsApp:
+     +91 9955570166
+
+     Email:
+     sursandconnect@gmail.com
+
+     FEATURES
+     ---------------------------------------------------------
+     ✓ Contact Us
+     ✓ Office Address
+     ✓ Call
+     ✓ WhatsApp
+     ✓ Email
+     ✓ Contact Form
+     ✓ Same formatted message for WhatsApp & Email
+     ✓ WhatsApp + Email buttons after form submission
+     ✓ Social Media buttons at bottom
+     ========================================================= -->
+
+<div id="sc-contact-page">
+
+<style>
+
+#sc-contact-page{
+  --green:#238b45;
+  --green-dark:#176b35;
+  --green-soft:#eaf7ed;
+
+  --saffron:#f28c28;
+  --saffron-dark:#d86f0d;
+  --saffron-soft:#fff0dd;
+
+  --blue:#2563eb;
+  --blue-dark:#1d4ed8;
+  --blue-soft:#eef4ff;
+
+  --whatsapp:#25d366;
+  --whatsapp-dark:#128c4a;
+
+  --red:#dc2626;
+  --red-soft:#fff0ee;
+
+  --purple:#7c3aed;
+
+  --text:#263238;
+  --muted:#667085;
+  --border:#e5e9e7;
+
+  max-width:1050px;
+
+  margin:26px auto;
+
+  padding:0 16px 50px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  color:var(--text);
+}
+
+
+#sc-contact-page *{
+  box-sizing:border-box;
+}
+
+
+/* =========================================================
+   SAFFRON HERO
+   ========================================================= */
+
+.sc-ct-hero{
+  position:relative;
+
+  overflow:hidden;
+
+  background:linear-gradient(
+    135deg,
+    #f7a13f 0%,
+    #f28c28 50%,
+    #e97812 100%
+  );
+
+  color:#fff;
+
+  padding:40px 24px;
+
+  border-radius:22px;
+
+  margin-bottom:23px;
+
+  text-align:center;
+
+  box-shadow:
+    0 14px 34px rgba(90,60,20,.16);
+}
+
+
+.sc-ct-hero::before{
+  content:"";
+
+  position:absolute;
+
+  width:180px;
+  height:180px;
+
+  left:-75px;
+  top:-85px;
+
+  border-radius:50%;
+
+  background:
+    rgba(255,255,255,.07);
+}
+
+
+.sc-ct-hero::after{
+  content:"";
+
+  position:absolute;
+
+  width:210px;
+  height:210px;
+
+  right:-80px;
+  bottom:-105px;
+
+  border-radius:50%;
+
+  background:
+    rgba(255,255,255,.08);
+}
+
+
+.sc-ct-hero h1{
+  position:relative;
+
+  z-index:2;
+
+  margin:0 0 9px;
+
+  color:#fff;
+
+  font-size:
+    clamp(29px,5vw,42px);
+
+  font-weight:800;
+}
+
+
+.sc-ct-hero p{
+  position:relative;
+
+  z-index:2;
+
+  max-width:760px;
+
+  margin:auto;
+
+  color:
+    rgba(255,255,255,.95);
+
+  line-height:1.65;
+
+  font-size:14px;
+}
+
+
+/* =========================================================
+   OFFICE CARD
+   ========================================================= */
+
+.sc-ct-office{
+  position:relative;
+
+  overflow:hidden;
+
+  display:grid;
+
+  grid-template-columns:
+    90px 1fr;
+
+  align-items:center;
+
+  gap:18px;
+
+  padding:21px;
+
+  margin-bottom:20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #fff8ee
+    );
+
+  border:
+    1px solid #f0dfca;
+
+  border-top:
+    5px solid var(--saffron);
+
+  border-radius:19px;
+
+  box-shadow:
+    0 8px 25px rgba(31,55,42,.07);
+}
+
+
+.sc-ct-office::after{
+  content:"";
+
+  position:absolute;
+
+  width:130px;
+  height:130px;
+
+  right:-55px;
+  top:-60px;
+
+  border-radius:50%;
+
+  background:
+    rgba(242,140,40,.06);
+}
+
+
+.sc-ct-office-icon{
+  width:78px;
+  height:78px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:20px;
+
+  background:var(--saffron-soft);
+
+  font-size:37px;
+}
+
+
+.sc-ct-office-info{
+  position:relative;
+
+  z-index:2;
+}
+
+
+.sc-ct-office-info span{
+  display:inline-block;
+
+  margin-bottom:6px;
+
+  padding:5px 9px;
+
+  border-radius:20px;
+
+  background:var(--saffron-soft);
+
+  color:#b85c00;
+
+  font-size:9px;
+
+  font-weight:800;
+}
+
+
+.sc-ct-office-info h2{
+  margin:0 0 6px;
+
+  color:var(--text);
+
+  font-size:21px;
+
+  font-weight:800;
+}
+
+
+.sc-ct-office-info p{
+  margin:0;
+
+  color:var(--muted);
+
+  font-size:12px;
+
+  line-height:1.6;
+}
+
+
+/* =========================================================
+   CONTACT CARDS
+   ========================================================= */
+
+.sc-ct-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,minmax(0,1fr));
+
+  gap:16px;
+
+  margin-bottom:23px;
+}
+
+
+.sc-ct-card{
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  min-height:205px;
+
+  padding:20px;
+
+  background:#fff;
+
+  border:
+    1px solid var(--border);
+
+  border-top:
+    4px solid var(--saffron);
+
+  border-radius:18px;
+
+  text-align:center;
+
+  box-shadow:
+    0 7px 24px rgba(0,0,0,.07);
+
+  transition:.2s ease;
+}
+
+
+.sc-ct-card:nth-child(1){
+  border-top-color:var(--green);
+}
+
+
+.sc-ct-card:nth-child(2){
+  border-top-color:var(--whatsapp);
+}
+
+
+.sc-ct-card:nth-child(3){
+  border-top-color:var(--blue);
+}
+
+
+.sc-ct-card:hover{
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 12px 28px rgba(0,0,0,.10);
+}
+
+
+.sc-ct-icon{
+  width:55px;
+  height:55px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  margin-bottom:11px;
+
+  border-radius:15px;
+
+  background:var(--saffron-soft);
+
+  font-size:27px;
+}
+
+
+.sc-ct-card:nth-child(1)
+.sc-ct-icon{
+  background:var(--green-soft);
+}
+
+
+.sc-ct-card:nth-child(2)
+.sc-ct-icon{
+  background:#e8f8ee;
+}
+
+
+.sc-ct-card:nth-child(3)
+.sc-ct-icon{
+  background:var(--blue-soft);
+}
+
+
+.sc-ct-card h3{
+  margin:0 0 5px;
+
+  color:var(--text);
+
+  font-size:17px;
+
+  font-weight:800;
+}
+
+
+.sc-ct-value{
+  margin-bottom:8px;
+
+  color:var(--text);
+
+  font-size:12px;
+
+  font-weight:700;
+}
+
+
+.sc-ct-card p{
+  flex:1;
+
+  margin:0 0 13px;
+
+  color:var(--muted);
+
+  font-size:11px;
+
+  line-height:1.6;
+}
+
+
+.sc-ct-card a{
+  width:100%;
+
+  min-height:42px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  text-decoration:none;
+
+  padding:9px 12px;
+
+  border-radius:9px;
+
+  font-size:11px;
+
+  font-weight:800;
+}
+
+
+/* CALL */
+
+.sc-ct-call-btn{
+  background:var(--green);
+
+  color:#fff !important;
+}
+
+
+.sc-ct-call-btn:hover{
+  background:var(--green-dark);
+}
+
+
+/* WHATSAPP */
+
+.sc-ct-whatsapp-btn{
+  background:var(--whatsapp);
+
+  color:#fff !important;
+}
+
+
+.sc-ct-whatsapp-btn:hover{
+  background:var(--whatsapp-dark);
+}
+
+
+/* EMAIL */
+
+.sc-ct-email-btn{
+  background:var(--blue);
+
+  color:#fff !important;
+}
+
+
+.sc-ct-email-btn:hover{
+  background:var(--blue-dark);
+}
+
+
+/* =========================================================
+   FORM WRAPPER
+   ========================================================= */
+
+.sc-ct-form-wrap{
+  position:relative;
+
+  overflow:hidden;
+
+  background:#fff;
+
+  border:
+    1px solid var(--border);
+
+  border-top:
+    5px solid var(--saffron);
+
+  border-radius:20px;
+
+  padding:23px;
+
+  box-shadow:
+    0 8px 25px rgba(0,0,0,.07);
+}
+
+
+.sc-ct-form-wrap::after{
+  content:"";
+
+  position:absolute;
+
+  width:150px;
+  height:150px;
+
+  right:-70px;
+  top:-70px;
+
+  border-radius:50%;
+
+  background:
+    rgba(242,140,40,.06);
+}
+
+
+.sc-ct-form-head{
+  position:relative;
+
+  z-index:2;
+
+  margin-bottom:19px;
+}
+
+
+.sc-ct-form-head h2{
+  margin:0 0 6px;
+
+  color:var(--text);
+
+  font-size:23px;
+
+  font-weight:800;
+}
+
+
+.sc-ct-form-head p{
+  max-width:720px;
+
+  margin:0;
+
+  color:var(--muted);
+
+  font-size:12px;
+
+  line-height:1.6;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.sc-ct-form{
+  position:relative;
+
+  z-index:2;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,minmax(0,1fr));
+
+  gap:14px;
+}
+
+
+.sc-ct-field{
+  display:flex;
+
+  flex-direction:column;
+
+  gap:6px;
+}
+
+
+.sc-ct-field.full{
+  grid-column:1/-1;
+}
+
+
+.sc-ct-field label{
+  color:var(--text);
+
+  font-size:11px;
+
+  font-weight:800;
+}
+
+
+.sc-ct-field input,
+.sc-ct-field select,
+.sc-ct-field textarea{
+  width:100%;
+
+  border:
+    1px solid #dcdfe3;
+
+  border-radius:10px;
+
+  padding:11px 12px;
+
+  outline:0;
+
+  background:#fff;
+
+  color:var(--text);
+
+  font-family:inherit;
+
+  font-size:12px;
+}
+
+
+.sc-ct-field textarea{
+  min-height:115px;
+
+  resize:vertical;
+}
+
+
+.sc-ct-field input:focus,
+.sc-ct-field select:focus,
+.sc-ct-field textarea:focus{
+  border-color:var(--saffron);
+
+  box-shadow:
+    0 0 0 3px rgba(242,140,40,.08);
+}
+
+
+/* =========================================================
+   FORM SUBMIT
+   ========================================================= */
+
+.sc-ct-submit{
+  grid-column:1/-1;
+
+  min-height:47px;
+
+  border:0;
+
+  background:var(--green);
+
+  color:#fff;
+
+  padding:12px 18px;
+
+  border-radius:10px;
+
+  font-family:inherit;
+
+  font-size:12px;
+
+  font-weight:800;
+
+  cursor:pointer;
+
+  box-shadow:
+    0 5px 14px rgba(35,139,69,.18);
+}
+
+
+.sc-ct-submit:hover{
+  background:var(--green-dark);
+}
+
+
+/* =========================================================
+   MESSAGE CHOICE PANEL
+   ========================================================= */
+
+.sc-ct-send-panel{
+  grid-column:1/-1;
+
+  display:none;
+
+  margin-top:3px;
+
+  padding:17px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f7fff9,
+      #f1f9ff
+    );
+
+  border:
+    1px solid #dce9e0;
+
+  border-top:
+    4px solid var(--green);
+
+  border-radius:14px;
+}
+
+
+.sc-ct-send-panel.active{
+  display:block;
+}
+
+
+.sc-ct-send-panel h3{
+  margin:0 0 5px;
+
+  color:var(--text);
+
+  font-size:15px;
+}
+
+
+.sc-ct-send-panel p{
+  margin:0 0 13px;
+
+  color:var(--muted);
+
+  font-size:10px;
+
+  line-height:1.55;
+}
+
+
+.sc-ct-send-actions{
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,minmax(0,1fr));
+
+  gap:9px;
+}
+
+
+.sc-ct-send-actions a{
+  min-height:46px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  gap:6px;
+
+  padding:10px;
+
+  border-radius:10px;
+
+  text-decoration:none;
+
+  text-align:center;
+
+  font-size:11px;
+
+  font-weight:800;
+}
+
+
+.sc-ct-send-whatsapp{
+  background:var(--whatsapp);
+
+  color:#fff !important;
+}
+
+
+.sc-ct-send-whatsapp:hover{
+  background:var(--whatsapp-dark);
+}
+
+
+.sc-ct-send-email{
+  background:var(--blue);
+
+  color:#fff !important;
+}
+
+
+.sc-ct-send-email:hover{
+  background:var(--blue-dark);
+}
+
+
+/* =========================================================
+   MESSAGE PREVIEW
+   ========================================================= */
+
+.sc-ct-message-preview{
+  margin-top:13px;
+
+  padding:12px;
+
+  background:#fff;
+
+  border:
+    1px solid var(--border);
+
+  border-radius:10px;
+
+  color:var(--muted);
+
+  font-size:10px;
+
+  line-height:1.6;
+
+  white-space:pre-wrap;
+
+  word-break:break-word;
+}
+
+
+.sc-ct-message-preview strong{
+  color:var(--text);
+}
+
+
+/* =========================================================
+   API STATUS
+   ========================================================= */
+
+.sc-ct-status{
+  grid-column:1/-1;
+
+  display:none;
+
+  padding:10px 12px;
+
+  border-radius:9px;
+
+  font-size:11px;
+
+  line-height:1.5;
+}
+
+
+.sc-ct-status.loading{
+  display:block;
+
+  background:#eef4ff;
+
+  color:#1d4ed8;
+}
+
+
+.sc-ct-status.ok{
+  display:block;
+
+  background:#eaf7ed;
+
+  color:var(--green-dark);
+}
+
+
+.sc-ct-status.error{
+  display:block;
+
+  background:#fff0ee;
+
+  color:#b3261e;
+}
+
+
+/* =========================================================
+   NOTE
+   ========================================================= */
+
+.sc-ct-note{
+  margin-top:19px;
+
+  padding:15px;
+
+  background:#fff8e8;
+
+  border-left:
+    5px solid var(--saffron);
+
+  border-radius:10px;
+
+  color:var(--muted);
+
+  font-size:11px;
+
+  line-height:1.6;
+}
+
+
+.sc-ct-note strong{
+  color:var(--text);
+}
+
+
+/* =========================================================
+   SOCIAL MEDIA
+   ========================================================= */
+
+.sc-ct-social{
+  margin-top:23px;
+
+  padding:21px;
+
+  background:#fff;
+
+  border:
+    1px solid var(--border);
+
+  border-top:
+    4px solid var(--saffron);
+
+  border-radius:18px;
+
+  text-align:center;
+
+  box-shadow:
+    0 7px 22px rgba(31,55,42,.06);
+}
+
+
+.sc-ct-social h2{
+  margin:0 0 5px;
+
+  color:var(--text);
+
+  font-size:20px;
+
+  font-weight:800;
+}
+
+
+.sc-ct-social p{
+  margin:0 0 15px;
+
+  color:var(--muted);
+
+  font-size:10px;
+}
+
+
+.sc-ct-social-buttons{
+  display:flex;
+
+  justify-content:center;
+
+  flex-wrap:wrap;
+
+  gap:10px;
+}
+
+
+.sc-ct-social-btn{
+  min-width:150px;
+
+  min-height:44px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  gap:7px;
+
+  border:0;
+
+  border-radius:10px;
+
+  padding:10px 14px;
+
+  color:#fff;
+
+  font-family:inherit;
+
+  font-size:11px;
+
+  font-weight:800;
+
+  cursor:pointer;
+
+  text-decoration:none;
+}
+
+
+/* INSTAGRAM */
+
+.sc-ct-instagram{
+  background:
+    linear-gradient(
+      135deg,
+      #833ab4,
+      #fd1d1d,
+      #fcb045
+    );
+}
+
+
+/* FACEBOOK */
+
+.sc-ct-facebook{
+  background:#1877f2;
+}
+
+
+/* YOUTUBE */
+
+.sc-ct-youtube{
+  background:#ff0000;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width:800px){
+
+  .sc-ct-grid{
+    grid-template-columns:
+      repeat(2,minmax(0,1fr));
+  }
+
+}
+
+
+@media(max-width:600px){
+
+  #sc-contact-page{
+    margin-top:18px;
+
+    padding-left:12px;
+
+    padding-right:12px;
+  }
+
+
+  .sc-ct-hero{
+    padding:30px 18px;
+
+    border-radius:18px;
+  }
+
+
+  .sc-ct-hero p{
+    font-size:12px;
+  }
+
+
+  .sc-ct-office{
+    grid-template-columns:1fr;
+
+    text-align:center;
+  }
+
+
+  .sc-ct-office-icon{
+    margin:auto;
+  }
+
+
+  .sc-ct-grid{
+    grid-template-columns:1fr;
+  }
+
+
+  .sc-ct-form-wrap{
+    padding:17px;
+  }
+
+
+  .sc-ct-form{
+    grid-template-columns:1fr;
+  }
+
+
+  .sc-ct-field.full,
+  .sc-ct-submit,
+  .sc-ct-status,
+  .sc-ct-send-panel{
+    grid-column:1;
+  }
+
+
+  .sc-ct-send-actions{
+    grid-template-columns:1fr;
+  }
+
+
+  .sc-ct-social-buttons{
+    flex-direction:column;
+  }
+
+
+  .sc-ct-social-btn{
+    width:100%;
+  }
+
+}
+
+</style>
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section class="sc-ct-hero">
+
+  <h1>
+    📩 Contact Us
+  </h1>
+
+  <p>
+    Contact us for local information, corrections,
+    shop/business listing support, Change Makers,
+    suggestions, technical support or general enquiries.
+  </p>
+
+</section>
+
+
+<!-- =========================================================
+     OFFICE
+     ========================================================= -->
+
+<section class="sc-ct-office">
+
+  <div class="sc-ct-office-icon">
+
+    🏢
+
+  </div>
+
+
+  <div class="sc-ct-office-info">
+
+    <span>
+      Sursand Connect Office
+    </span>
+
+
+    <h2>
+      Sewangan Charitable Trust
+    </h2>
+
+
+    <p>
+      Sursand, Sitamarhi, Bihar, India
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT CARDS
+     ========================================================= -->
+
+<div class="sc-ct-grid">
+
+
+  <!-- =====================================================
+       PHONE
+       ===================================================== -->
+
+  <article class="sc-ct-card">
+
+
+    <div class="sc-ct-icon">
+
+      📞
+
+    </div>
+
+
+    <h3>
+      Call Us
+    </h3>
+
+
+    <div class="sc-ct-value">
+
+      +91 6203302027
+
+    </div>
+
+
+    <p>
+      Call Sursand Connect for information,
+      support or general enquiries.
+    </p>
+
+
+    <a
+      class="sc-ct-call-btn"
+      href="tel:+916203302027">
+
+      📞 Call Now
+
+    </a>
+
+
+  </article>
+
+
+  <!-- =====================================================
+       WHATSAPP
+       ===================================================== -->
+
+  <article class="sc-ct-card">
+
+
+    <div class="sc-ct-icon">
+
+      💬
+
+    </div>
+
+
+    <h3>
+      WhatsApp
+    </h3>
+
+
+    <div class="sc-ct-value">
+
+      +91 9955570166
+
+    </div>
+
+
+    <p>
+      Send information, corrections,
+      enquiries or support requests on WhatsApp.
+    </p>
+
+
+    <a
+      class="sc-ct-whatsapp-btn"
+      href="https://wa.me/919955570166?text=Hello%20Sursand%20Connect%2C%20I%20would%20like%20to%20contact%20you."
+      target="_blank"
+      rel="noopener noreferrer">
+
+      💬 WhatsApp
+
+    </a>
+
+
+  </article>
+
+
+  <!-- =====================================================
+       EMAIL
+       ===================================================== -->
+
+  <article class="sc-ct-card">
+
+
+    <div class="sc-ct-icon">
+
+      📧
+
+    </div>
+
+
+    <h3>
+      Email Us
+    </h3>
+
+
+    <div class="sc-ct-value">
+
+      sursandconnect@gmail.com
+
+    </div>
+
+
+    <p>
+      Email us for detailed enquiries,
+      suggestions, corrections or support.
+    </p>
+
+
+    <a
+      class="sc-ct-email-btn"
+      href="mailto:sursandconnect@gmail.com">
+
+      ✉️ Send Email
+
+    </a>
+
+
+  </article>
+
+
+</div>
+
+
+<!-- =========================================================
+     CONTACT FORM
+     ========================================================= -->
+
+<section class="sc-ct-form-wrap">
+
+
+  <div class="sc-ct-form-head">
+
+    <h2>
+      📝 Send Us a Message
+    </h2>
+
+
+    <p>
+      Fill in your enquiry below. After clicking
+      <strong>Continue</strong>, you can send the same
+      formatted message through WhatsApp or Email.
+    </p>
+
+  </div>
+
+
+  <form
+    class="sc-ct-form"
+    id="scCtForm">
+
+
+    <!-- =====================================================
+         NAME
+         ===================================================== -->
+
+    <div class="sc-ct-field">
+
+      <label>
+        Full Name *
+      </label>
+
+
+      <input
+        type="text"
+        id="scCtName"
+        placeholder="Enter your full name"
+        required>
+
+    </div>
+
+
+    <!-- =====================================================
+         MOBILE
+         ===================================================== -->
+
+    <div class="sc-ct-field">
+
+      <label>
+        Mobile Number *
+      </label>
+
+
+      <input
+        type="tel"
+        id="scCtPhone"
+        placeholder="Enter mobile number"
+        required>
+
+    </div>
+
+
+    <!-- =====================================================
+         EMAIL
+         ===================================================== -->
+
+    <div class="sc-ct-field">
+
+      <label>
+        Your Email
+      </label>
+
+
+      <input
+        type="email"
+        id="scCtEmail"
+        placeholder="Optional">
+
+    </div>
+
+
+    <!-- =====================================================
+         ENQUIRY TYPE
+         ===================================================== -->
+
+    <div class="sc-ct-field">
+
+      <label>
+        Enquiry Type
+      </label>
+
+
+      <select id="scCtType">
+
+
+        <option value="">
+          Select
+        </option>
+
+
+        <option>
+          General Enquiry
+        </option>
+
+
+        <option>
+          Information Correction
+        </option>
+
+
+        <option>
+          Add Local Information
+        </option>
+
+
+        <option>
+          Shop / Business Listing Support
+        </option>
+
+
+        <option>
+          Local Services
+        </option>
+
+
+        <option>
+          Change Makers Community
+        </option>
+
+
+        <option>
+          Charity
+        </option>
+
+
+        <option>
+          Events &amp; Announcements
+        </option>
+
+
+        <option>
+          Technical Issue
+        </option>
+
+
+        <option>
+          Suggestion / Feedback
+        </option>
+
+
+        <option>
+          Other
+        </option>
+
+
+      </select>
+
+    </div>
+
+
+    <!-- =====================================================
+         SUBJECT
+         ===================================================== -->
+
+    <div class="sc-ct-field full">
+
+      <label>
+        Subject
+      </label>
+
+
+      <input
+        type="text"
+        id="scCtSubject"
+        placeholder="Enter subject">
+
+    </div>
+
+
+    <!-- =====================================================
+         MESSAGE
+         ===================================================== -->
+
+    <div class="sc-ct-field full">
+
+      <label>
+        Message *
+      </label>
+
+
+      <textarea
+        id="scCtMessage"
+        placeholder="Write your message..."
+        required></textarea>
+
+    </div>
+
+
+    <!-- =====================================================
+         CONTINUE
+         ===================================================== -->
+
+    <button
+      type="submit"
+      class="sc-ct-submit">
+
+      📩 Continue
+
+    </button>
+
+
+    <!-- =====================================================
+         STATUS
+         ===================================================== -->
+
+    <div
+      id="scCtStatus"
+      class="sc-ct-status">
+    </div>
+
+
+    <!-- =====================================================
+         WHATSAPP / EMAIL CHOICE
+         ===================================================== -->
+
+    <div
+      id="scCtSendPanel"
+      class="sc-ct-send-panel">
+
+
+      <h3>
+        ✅ Your message is ready
+      </h3>
+
+
+      <p>
+        Select how you would like to send your enquiry.
+        The same information will be included in both options.
+      </p>
+
+
+      <div class="sc-ct-send-actions">
+
+
+        <a
+          id="scCtSendWhatsapp"
+          class="sc-ct-send-whatsapp"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          💬 Send via WhatsApp
+
+        </a>
+
+
+        <a
+          id="scCtSendEmail"
+          class="sc-ct-send-email"
+          href="#">
+
+          ✉️ Send via Email
+
+        </a>
+
+
+      </div>
+
+
+      <div
+        class="sc-ct-message-preview"
+        id="scCtMessagePreview">
+      </div>
+
+
+    </div>
+
+
+  </form>
+
+</section>
+
+
+<!-- =========================================================
+     IMPORTANT NOTE
+     ========================================================= -->
+
+<div class="sc-ct-note">
+
+  <strong>
+    Note:
+  </strong>
+
+  Sursand Connect is a local information and community platform.
+  For emergencies, please use the Emergency Services section
+  instead of this contact form.
+
+</div>
+
+
+<!-- =========================================================
+     SOCIAL MEDIA
+     ========================================================= -->
+
+<section class="sc-ct-social">
+
+
+  <h2>
+    🌐 Follow Sursand Connect
+  </h2>
+
+
+  <p>
+    Follow our social-media channels for local updates,
+    announcements and community information.
+  </p>
+
+
+  <div class="sc-ct-social-buttons">
+
+
+    <!-- INSTAGRAM -->
+
+    <button
+      type="button"
+      class="sc-ct-social-btn sc-ct-instagram"
+      onclick="window.open('https://www.instagram.com/sursandtoday?stkn=cG5lNDNleGFwNDc=','_blank','noopener')">
+
+      📸 Instagram
+
+    </button>
+
+
+    <!-- FACEBOOK -->
+
+    <button
+      type="button"
+      class="sc-ct-social-btn sc-ct-facebook"
+      onclick="window.open('https://www.facebook.com/sursandtoday','_blank','noopener')">
+
+      👍 Facebook
+
+    </button>
+
+
+    <!-- YOUTUBE -->
+
+    <button
+      type="button"
+      class="sc-ct-social-btn sc-ct-youtube"
+      onclick="window.open('https://youtube.com/@sursandtoday?si=mNAZL97VhPlhIq_0','_blank','noopener')">
+
+      ▶️ YouTube
+
+    </button>
+
+
+  </div>
+
+</section>
+
+
+<script>
+
+/* =========================================================
+   CONTACT SETTINGS
+   ========================================================= */
+
+const SC_CT_API =
+"https://script.google.com/macros/s/AKfycbyjTV3BcPjYhXEDFlRhw0P-ZNDR7_k47N3emxak9ccgB2iHjUadognpyWUTBaZe07bu/exec";
+
+
+const SC_CT_PHONE =
+  "+916203302027";
+
+
+const SC_CT_WHATSAPP =
+  "919955570166";
+
+
+const SC_CT_EMAIL =
+  "sursandconnect@gmail.com";
+
+
+/* =========================================================
+   CONTACT FORM
+   ========================================================= */
+
+document
+.getElementById(
+  "scCtForm"
+)
+.addEventListener(
+  "submit",
+  async function(event){
+
+    event.preventDefault();
+
+
+    const status =
+      document.getElementById(
+        "scCtStatus"
+      );
+
+
+    const panel =
+      document.getElementById(
+        "scCtSendPanel"
+      );
+
+
+    /* =====================================================
+       GET DATA
+       ===================================================== */
+
+    const name =
+      document
+      .getElementById(
+        "scCtName"
+      )
+      .value
+      .trim();
+
+
+    const phone =
+      document
+      .getElementById(
+        "scCtPhone"
+      )
+      .value
+      .trim();
+
+
+    const email =
+      document
+      .getElementById(
+        "scCtEmail"
+      )
+      .value
+      .trim();
+
+
+    const type =
+      document
+      .getElementById(
+        "scCtType"
+      )
+      .value
+      .trim();
+
+
+    const subject =
+      document
+      .getElementById(
+        "scCtSubject"
+      )
+      .value
+      .trim();
+
+
+    const message =
+      document
+      .getElementById(
+        "scCtMessage"
+      )
+      .value
+      .trim();
+
+
+    /* =====================================================
+       VALIDATION
+       ===================================================== */
+
+    if(
+      !name ||
+      !phone ||
+      !message
+    ){
+
+      panel.classList.remove(
+        "active"
+      );
+
+
+      status.className =
+        "sc-ct-status error";
+
+
+      status.textContent =
+        "Please enter your name, mobile number and message.";
+
+
+      return;
+
+    }
+
+
+    /* =====================================================
+       FORMAT SAME MESSAGE FOR WHATSAPP + EMAIL
+       ===================================================== */
+
+    const formattedMessage =
+      scCtBuildMessage({
+
+        name:name,
+
+        phone:phone,
+
+        email:email,
+
+        type:type,
+
+        subject:subject,
+
+        message:message
+
+      });
+
+
+    /* =====================================================
+       WHATSAPP BUTTON
+       ===================================================== */
+
+    const whatsappURL =
+
+      "https://wa.me/" +
+
+      SC_CT_WHATSAPP +
+
+      "?text=" +
+
+      encodeURIComponent(
+        formattedMessage
+      );
+
+
+    document
+    .getElementById(
+      "scCtSendWhatsapp"
+    )
+    .href =
+      whatsappURL;
+
+
+    /* =====================================================
+       EMAIL BUTTON
+       ===================================================== */
+
+    const emailSubject =
+
+      subject
+
+      ||
+
+      (
+        type
+
+        ? "Sursand Connect - " +
+          type
+
+        : "Sursand Connect Enquiry"
+      );
+
+
+    const emailURL =
+
+      "mailto:" +
+
+      SC_CT_EMAIL +
+
+      "?subject=" +
+
+      encodeURIComponent(
+        emailSubject
+      ) +
+
+      "&body=" +
+
+      encodeURIComponent(
+        formattedMessage
+      );
+
+
+    document
+    .getElementById(
+      "scCtSendEmail"
+    )
+    .href =
+      emailURL;
+
+
+    /* =====================================================
+       PREVIEW
+       ===================================================== */
+
+    document
+    .getElementById(
+      "scCtMessagePreview"
+    )
+    .textContent =
+      formattedMessage;
+
+
+    /* =====================================================
+       SHOW BOTH BUTTONS IMMEDIATELY
+       ===================================================== */
+
+    panel.classList.add(
+      "active"
+    );
+
+
+    panel.scrollIntoView({
+      behavior:"smooth",
+      block:"nearest"
+    });
+
+
+    /* =====================================================
+       SAVE COPY TO EXISTING APPS SCRIPT
+
+       This runs in background.
+       Even if Apps Script is not yet redeployed,
+       WhatsApp and Email buttons still work.
+       ===================================================== */
+
+    status.className =
+      "sc-ct-status loading";
+
+
+    status.textContent =
+      "Preparing your enquiry...";
+
+
+    try{
+
+
+      const params =
+        new URLSearchParams({
+
+
+          action:
+            "contact",
+
+
+          name:
+            name,
+
+
+          phone:
+            phone,
+
+
+          email:
+            email,
+
+
+          type:
+            type,
+
+
+          subject:
+            subject,
+
+
+          message:
+            message
+
+
+        });
+
+
+      const response =
+        await fetch(
+
+          SC_CT_API +
+
+          "?" +
+
+          params.toString()
+
+        );
+
+
+      const result =
+        await response.json();
+
+
+      if(
+        result &&
+        result.success
+      ){
+
+        status.className =
+          "sc-ct-status ok";
+
+
+        status.textContent =
+          "Your enquiry is ready. Please choose WhatsApp or Email below.";
+
+      }
+
+      else{
+
+        /*
+         * Do not stop direct WhatsApp/Email.
+         */
+
+        status.className =
+          "sc-ct-status ok";
+
+
+        status.textContent =
+          "Your enquiry is ready. Please choose WhatsApp or Email below.";
+
+      }
+
+
+    }
+
+    catch(error){
+
+
+      console.warn(
+        "Contact API:",
+        error
+      );
+
+
+      /*
+       * Direct contact methods continue working.
+       */
+
+      status.className =
+        "sc-ct-status ok";
+
+
+      status.textContent =
+        "Your enquiry is ready. Please choose WhatsApp or Email below.";
+
+    }
+
+
+  }
+);
+
+
+/* =========================================================
+   BUILD IDENTICAL MESSAGE
+   ========================================================= */
+
+function scCtBuildMessage(data){
+
+  let text =
+
+    "SURSAND CONNECT - CONTACT ENQUIRY" +
+
+    "\n" +
+
+    "--------------------------------" +
+
+    "\n\n" +
+
+    "Name: " +
+    data.name +
+
+    "\n" +
+
+    "Mobile: " +
+    data.phone;
+
+
+  if(
+    data.email
+  ){
+
+    text +=
+
+      "\n" +
+
+      "Email: " +
+      data.email;
+
+  }
+
+
+  if(
+    data.type
+  ){
+
+    text +=
+
+      "\n" +
+
+      "Enquiry Type: " +
+      data.type;
+
+  }
+
+
+  if(
+    data.subject
+  ){
+
+    text +=
+
+      "\n" +
+
+      "Subject: " +
+      data.subject;
+
+  }
+
+
+  text +=
+
+    "\n\n" +
+
+    "Message:" +
+
+    "\n" +
+
+    data.message +
+
+    "\n\n" +
+
+    "--------------------------------" +
+
+    "\n" +
+
+    "Sent through Sursand Connect";
+
+
+  return text;
+
+}
+
+
+/* =========================================================
+   SOCIAL MEDIA PLACEHOLDERS
+   ========================================================= */
+
+function scCtSocialComingSoon(platform){
+
+  alert(
+    platform +
+    " link will be added soon."
+  );
+
+}
+
+
+/* =========================================================
+   PHONE HELPERS
+   ========================================================= */
+
+function scCtPhone(value){
+
+  return String(
+    value || ""
+  )
+  .replace(
+    /[^0-9+]/g,
+    ""
+  );
+
+}
+
+
+/* =========================================================
+   WHATSAPP HELPER
+   ========================================================= */
+
+function scCtWhatsApp(value){
+
+  let number =
+    String(
+      value || ""
+    )
+    .replace(
+      /\D/g,
+      ""
+    );
+
+
+  if(
+    number.length === 10
+  ){
+
+    number =
+      "91" +
+      number;
+
+  }
+
+
+  return number;
+
+}
+
+</script>
+
+</div></main>
+<nav class="sc-bottom"><a href="../">⌂<span data-sc-nav data-en="Home" data-hi="होम">Home</span></a><a href="businesses.html">🏪<span data-sc-nav data-en="Shop" data-hi="दुकान">Shop</span></a><a href="city-connect.html">💬<span data-sc-nav data-en="City Connect" data-hi="सिटी कनेक्ट">City Connect</span></a><a href="events.html">📅<span data-sc-nav data-en="Events" data-hi="कार्यक्रम">Events</span></a><a href="javascript:void(0)" onclick="scOpenMenu()"><b class="sc-menu-lines">☰</b><span data-sc-nav data-en="Menu" data-hi="मेनू">Menu</span></a></nav>
+<div class="sc-menu-sheet" id="scMenuSheet" onclick="if(event.target===this)scCloseMenu()"><div class="sc-menu-panel"><div class="sc-menu-handle"></div><div class="sc-menu-head"><h3>☰ App Menu & Settings</h3><button class="sc-menu-close" onclick="scCloseMenu()">×</button></div><div class="sc-menu-grid"><a class="sc-menu-card" href="complaints.html"><span>📣</span>My Complaints</a><a class="sc-menu-card" href="charity.html"><span>❤️</span>Charity &amp; Donations</a><a class="sc-menu-card" href="city-connect.html"><span>💬</span>City Connect</a><a class="sc-menu-card" href="representatives.html"><span>👥</span>Representatives</a><a class="sc-menu-card" href="government-offices.html"><span>🏛️</span>Government Offices</a><a class="sc-menu-card" href="weather.html"><span>🌦️</span>Weather</a><a class="sc-menu-card" href="jobs.html"><span>💼</span>Jobs</a><a class="sc-menu-card" href="settings.html"><span>⚙️</span>All Settings</a><a class="sc-menu-card" href="notifications.html"><span>🔔</span>Notifications</a><a class="sc-menu-card" href="about.html"><span>ℹ️</span>About Sursand Connect</a><a class="sc-menu-card" href="contact.html"><span>✉️</span>Contact Us</a><button class="sc-menu-card sc-menu-full" onclick="scShareApp()"><span>↗️</span>Share Sursand Connect App</button></div><div class="sc-setting-row"><label>Language</label><select id="scLanguageSelect" onchange="scSetLanguage(this.value)"><option value="en">English</option><option value="hi">हिन्दी</option></select></div><div class="sc-setting-row"><label>Theme</label><select id="scThemeSelect" onchange="scSetTheme(this.value)"><option value="light">Light</option><option value="dark">Dark</option></select></div></div></div>
+<script>if('serviceWorker' in navigator)navigator.serviceWorker.register('../sw.js').catch(()=>{});</script><script src="../offline-data.js"></script>
+<script src="../app-i18n.js"></script>
+<script src="../app-i18n-extra.js"></script>
+
+
+<script src="../app-notifications.js"></script>
+<script src="../app-media.js"></script>
+<script>
+(function scFocusRequestedResult(){
+  const q=new URLSearchParams(location.search).get('focus'); if(!q)return;
+  const needle=decodeURIComponent(q).trim().toLowerCase(); if(!needle)return;
+  let tries=0; const timer=setInterval(function(){
+    tries++; const nodes=[...document.querySelectorAll('article,.card,[class*=card],tr,li')];
+    const hit=nodes.find(el=>(el.innerText||'').toLowerCase().includes(needle));
+    if(hit){clearInterval(timer);hit.scrollIntoView({behavior:'smooth',block:'center'});hit.style.outline='3px solid #f28c28';hit.style.outlineOffset='3px';setTimeout(()=>{hit.style.outline='';hit.style.outlineOffset=''},3500)}
+    else if(tries>20)clearInterval(timer);
+  },250);
+})();
+</script><script>(function(){window.alert=function(msg){let x=document.getElementById('scInlineToast');if(!x){x=document.createElement('div');x.id='scInlineToast';x.style.cssText='position:fixed;left:50%;bottom:84px;transform:translateX(-50%);z-index:3000000;background:#263238;color:#fff;padding:10px 14px;border-radius:12px;max-width:88vw;font:700 11px Arial;box-shadow:0 8px 24px #0004';document.body.appendChild(x)}x.textContent=String(msg||'');x.style.display='block';clearTimeout(window.__scToastT);window.__scToastT=setTimeout(()=>x.style.display='none',2800)}})();</script><script src="../app-enhancements.js"></script><script src="../universal-qr.js"></script></body></html>

@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#e97712">
+<title>Sursand Connect</title>
+<link rel="manifest" href="manifest.webmanifest">
+<style>
+:root{--s:#f28c28;--sd:#d86f0d;--g:#238b45;--gd:#176b35;--text:#263238;--muted:#667085;--bg:#f8fafc;--border:#e6ebe7}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}body{padding-top:66px;padding-bottom:118px}
+.sc-appbar{position:fixed;top:0;left:0;right:0;height:58px;background:rgba(255,255,255,.98);border-bottom:1px solid #eceff1;box-shadow:0 5px 18px rgba(15,23,42,.08);display:flex;align-items:center;justify-content:space-between;padding:4px 12px;z-index:999999}.sc-appbar-brand{display:flex;gap:9px;align-items:center;text-decoration:none;color:#263238}.sc-appbar-brand img{width:41px;height:41px;object-fit:contain;border-radius:12px}.sc-appbar-brand span{display:flex;flex-direction:column;line-height:1.08}.sc-appbar-brand b{font-size:14px}.sc-appbar-brand small{font-size:9px;color:#667085;margin-top:3px}.sc-appbar-actions{display:flex;gap:8px;align-items:center}.sc-head-action{width:44px;height:44px;min-width:44px;border-radius:14px;border:1px solid #f0d7bd;background:#fff7ed;color:#c86508;display:flex;align-items:center;justify-content:center;text-decoration:none;position:relative;padding:0;cursor:pointer;box-shadow:0 3px 10px rgba(15,23,42,.08)}.sc-head-action svg{width:23px;height:23px;display:block}.sc-head-action:active{transform:scale(.95)}.sc-bell-dot{position:absolute;top:6px;right:6px;width:7px;height:7px;background:#dc2626;border:2px solid #fff;border-radius:50%}
+.sc-bottom{position:fixed;bottom:0;left:0;right:0;height:64px;background:linear-gradient(135deg,#f7a13f,#f28c28 52%,#e97812);display:grid;grid-template-columns:repeat(5,1fr);z-index:999999;box-shadow:0 -5px 18px rgba(15,23,42,.10)}.sc-bottom a{color:#fff;text-decoration:none;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:18px;gap:1px}.sc-bottom a span{font-size:8px;font-weight:800}.sc-bottom a:active{background:rgba(255,255,255,.12)}
+.home{max-width:1150px;margin:auto;padding:0 13px 38px}.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#f7a13f,#f28c28 52%,#e97812);border-radius:23px;padding:31px 19px;color:#fff;box-shadow:0 14px 34px rgba(90,60,20,.16);margin:13px 0 15px}.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.09)}.hero:before{width:145px;height:145px;left:-70px;top:-70px}.hero:after{width:210px;height:210px;right:-80px;bottom:-105px}.hero>*{position:relative;z-index:1}.welcome{font-size:10px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}.hero h1{color:#fff;font-size:34px;line-height:1.04;margin:8px 0}.hero p{font-size:11px;line-height:1.6;max-width:620px}.hero-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:15px}.hero-btn{min-height:42px;border-radius:11px;color:#fff;text-decoration:none;font-size:9px;font-weight:900;display:flex;align-items:center;justify-content:center;text-align:center;padding:7px;box-shadow:0 5px 14px rgba(0,0,0,.14);border:2px solid #fff}.hero-shop{background:linear-gradient(145deg,#2fa85a,#176b35)}.hero-service{background:linear-gradient(145deg,#f7cf45,#e0a914);color:#3b2d00}.hero-complaint{background:linear-gradient(145deg,#f25f5f,#c62828)}
+.search{margin:0 2px 17px;background:#fff;border:1px solid var(--border);border-radius:999px;padding:5px;display:flex;box-shadow:0 7px 20px rgba(15,23,42,.06)}.search input{flex:1;min-width:0;border:0;outline:0;padding:11px 13px;background:transparent;font-size:11px}.search button{width:43px;border:0;border-radius:999px;background:#238b45;color:#fff}
+.section-title{font-size:17px;margin:0}.section-sub{font-size:9.5px;color:var(--muted);margin:4px 0 12px}
+.quick{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.qcard{min-height:112px;border-radius:18px;padding:14px;text-decoration:none;color:#fff;box-shadow:0 8px 0 rgba(15,23,42,.10),0 15px 22px rgba(15,23,42,.12);display:flex;align-items:center;gap:12px;position:relative;overflow:hidden}.qcard:after{content:"";position:absolute;width:90px;height:90px;border-radius:50%;right:-25px;top:-35px;background:rgba(255,255,255,.13)}.qicon{width:52px;height:52px;border-radius:15px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:27px;box-shadow:0 4px 12px rgba(15,23,42,.13);flex:0 0 52px;position:relative;z-index:1}.qtext{position:relative;z-index:1}.qtext b{display:block;color:#fff;font-size:12px;line-height:1.2}.qtext span{display:block;color:rgba(255,255,255,.9);font-size:8.5px;line-height:1.4;margin-top:4px}.q1{background:linear-gradient(145deg,#ff9a4d,#ea5a35)}.q2{background:linear-gradient(145deg,#4fb7f3,#2563eb)}.q3{background:linear-gradient(145deg,#ee6d9d,#db2777)}.q4{background:linear-gradient(145deg,#ffb55a,#f28c28)}.q5{background:linear-gradient(145deg,#a78bfa,#7c3aed)}.q6{background:linear-gradient(145deg,#ff6b6b,#dc2626)}.q7{background:linear-gradient(145deg,#10b981,#047857)}.q8{background:linear-gradient(145deg,#8b5cf6,#6d28d9)}.after-quick{margin-top:14px}
+.small-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:19px}.small-card{min-height:104px;border-radius:16px;padding:10px;text-decoration:none;color:#263238;background:#fff;border:1px solid #e6ebe7;box-shadow:0 7px 0 #e6e9e7,0 13px 20px rgba(15,23,42,.08);display:flex;flex-direction:column;justify-content:flex-start;gap:9px}.small-card:active{transform:translateY(3px)}.sicon{width:35px;height:35px;border-radius:11px;background:#fff7ed;border:1px solid #f6d9bb;display:flex;align-items:center;justify-content:center;font-size:18px}.small-card>div:last-child{display:flex;flex-direction:column;gap:3px}.small-card b{display:block;font-size:9.5px;line-height:1.18}.small-card span{display:block;font-size:7.5px;color:#667085;line-height:1.35;margin:0}
+.news{margin-top:20px}.news-shell{background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:0 7px 20px rgba(15,23,42,.06);overflow:hidden}.news-head{display:flex;align-items:center;justify-content:space-between;padding:12px 13px;border-bottom:1px solid #edf0ee}.news-head h3{margin:0;font-size:12px}.fb-chip{font-size:8px;background:#eef4ff;color:#1d4ed8;padding:5px 8px;border-radius:999px;font-weight:800}.slider{position:relative;min-height:112px}.slide{display:none;padding:13px}.slide.active{display:block}.slide b{font-size:11px}.slide p{font-size:9px;color:#667085;line-height:1.55;margin:6px 0}.slide a{font-size:8.5px;font-weight:800;color:#2563eb;text-decoration:none}.dots{text-align:center;padding:0 0 10px}.dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#d4d9dc;margin:0 3px}.dot.active{background:#f28c28}
+.menu-sheet{display:none;position:fixed;inset:0;background:rgba(15,23,42,.45);z-index:1000000;align-items:flex-end}.menu-sheet.active{display:flex}.menu{width:100%;max-height:82vh;overflow:auto;background:#fff;border-radius:24px 24px 0 0;padding:12px 14px 24px}.handle{width:44px;height:4px;background:#d7dce0;border-radius:999px;margin:0 auto 12px}.menu-head{display:flex;justify-content:space-between;align-items:center}.menu-head h3{font-size:15px;margin:0}.menu-head button{width:34px;height:34px;border:0;border-radius:10px;background:#f1f5f3}.menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:11px}.menu-card{border:1px solid var(--border);background:#fff;border-radius:14px;padding:12px;text-decoration:none;color:#263238;box-shadow:0 5px 14px rgba(15,23,42,.06);font-size:10px;font-weight:800}.menu-card span{display:block;font-size:20px;margin-bottom:4px}.menu-full{grid-column:1/-1}.setting{display:flex;justify-content:space-between;align-items:center;border:1px solid var(--border);border-radius:14px;padding:11px;margin-top:9px;font-size:10px;font-weight:800}.setting select{border:1px solid #dfe5e1;border-radius:9px;padding:7px;background:#f8faf8}.dark body{background:#0f172a;color:#e5e7eb}.dark .sc-appbar,.dark .menu{background:#111827;color:#fff}.dark .small-card,.dark .news-shell,.dark .menu-card,.dark .setting{background:#1f2937;color:#fff;border-color:#374151}.dark .small-card span,.dark .slide p{color:#cbd5e1}
+@media(min-width:900px){body{padding-bottom:20px}.sc-bottom{display:none}}
+/* v10.4 green bottom */
+.sc-bottom{background:linear-gradient(135deg,#34a853,#238b45 52%,#176b35)!important}
+
+.sc-home-catalogues{margin:14px 0 10px!important}.sc-home-catalogue-grid{display:grid!important;grid-template-columns:1fr 1fr!important;gap:10px!important}
+.sc-home-catalogue-grid .qcard{min-height:86px!important;margin:0!important}
+</style>
+<script src="app-data.js"></script></head>
+<body>
+<header class="sc-appbar">
+<a href="./" class="sc-appbar-brand"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgM6ePTCVaqvhVtE9SqPzEyzrYrHjo0MlxUbzHS1D8ORCNX_at01YJcY6a7ltTxA2AaYEuojBw-VotVudZXLNUHVSs6xQvLX6zbNBh-bVnm0v6gURU0yStk_fObHB9rGNwbkf2v_GTyAmcwAG0m8srp0at1riLJSCvOLU3kFneNoNlX-C1XLbioi4RtmDfU/s1600/IMG_20260820_101456.png"><span><b>Sursand Connect</b><small id="brandSub">Your Local Digital Community</small></span></a>
+<div class="sc-appbar-actions">
+<a class="sc-head-action" href="p/notifications.html" title="Notifications" aria-label="Notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/><path d="M10 21h4"/></svg><i class="sc-bell-dot"></i></a>
+<button class="sc-head-action sc-qr-scan" type="button" onclick="window.SCQR&&SCQR.openScanner()" title="Scan" aria-label="Scan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3"/><circle cx="12" cy="12" r="3"/><path d="M12 7v2M12 15v2M7 12h2M15 12h2"/></svg></button>
+<button class="sc-head-action" id="scHeaderRefresh" type="button" onclick="window.SCGlobalRefresh?SCGlobalRefresh(this):location.reload()" title="Refresh" aria-label="Refresh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6v5h-5"/><path d="M4 18v-5h5"/><path d="M6.1 9a7 7 0 0 1 11.6-2.6L20 11M4 13l2.3 4.6A7 7 0 0 0 18 15"/></svg></button>
+</div>
+</header>
+
+<main class="home">
+<section class="hero">
+<div class="welcome" data-k="welcome">Welcome to Sursand</div>
+<h1><span data-k="hero1">Sursand,</span><br><span data-k="hero2">Connected in One Place.</span></h1>
+<p data-k="heroDesc">Discover local businesses, services, events, announcements, emergency contacts and your local community — all from Sursand Connect.</p>
+<div class="hero-actions">
+<a class="hero-btn hero-shop" href="p/businesses.html" data-k="shopNow">🛍️ Shop Now</a>
+<a class="hero-btn hero-service" href="p/services.html" data-k="bookServices">🛠️ Book Services</a>
+<a class="hero-btn hero-complaint" href="p/complaints.html" data-k="complaints">📣 Complaints</a>
+</div>
+</section>
+
+<section class="sc-home-catalogues" aria-label="Local ordering">
+<div class="quick sc-home-catalogue-grid">
+<a class="qcard q1" id="orderFoodCard" href="#"><div class="qicon">🍽️</div><div class="qtext"><b data-k="orderFood">Order Food</b><span data-k="orderFoodD">Order food online and get delivered to your doorstep.</span></div></a>
+<a class="qcard q2" id="buyGroceryCard" href="#"><div class="qicon">🛒</div><div class="qtext"><b data-k="buyGrocery">Buy Grocery</b><span data-k="buyGroceryD">Order grocery online and get delivered to your doorstep.</span></div></a>
+</div>
+</section>
+<form class="search" onsubmit="return doSearch(event)"><input id="homeSearch" data-ph="search" placeholder="Search anything in Sursand Connect..."><button>🔍</button></form>
+
+<section>
+<h2 class="section-title" data-k="quickTitle">Quick Services</h2>
+<p class="section-sub" data-k="quickSub">Useful services for everyday life in Sursand</p>
+<div class="quick">
+
+
+<a class="qcard q3" href="p/charity.html"><div class="qicon">❤️</div><div class="qtext"><b data-k="charity">Charity</b><span data-k="charityD">Donate money or request goods pickup</span></div></a>
+<a class="qcard q4" href="p/businesses.html"><div class="qicon">🏪</div><div class="qtext"><b data-k="businesses">Businesses</b><span data-k="businessesD">Find local shops and businesses</span></div></a>
+<a class="qcard q5" href="p/events.html"><div class="qicon">📅</div><div class="qtext"><b data-k="events">Events</b><span data-k="eventsD">Local events, notices and announcements</span></div></a>
+<a class="qcard q6" href="p/emergency.html"><div class="qicon">🚨</div><div class="qtext"><b data-k="emergency">Emergency</b><span data-k="emergencyD">Important emergency helplines</span></div></a>
+</div>
+</section>
+
+<section class="small-grid">
+<a class="small-card" href="p/healthcare.html"><div class="sicon">🏥</div><div><b data-k="health">Healthcare</b><span data-k="healthD">Doctors, labs & medicine</span></div></a>
+<a class="small-card" href="p/education.html"><div class="sicon">🎓</div><div><b data-k="education">Education</b><span data-k="educationD">Schools & learning</span></div></a>
+<a class="small-card" href="p/representatives.html"><div class="sicon">👥</div><div><b data-k="representatives">Representatives</b><span data-k="repD">Chairman, Vice Chairman & wards</span></div></a>
+<a class="small-card" href="p/important-places.html"><div class="sicon">📍</div><div><b data-k="places">Important Places</b><span data-k="placesD">Important local locations</span></div></a>
+<a class="small-card" href="p/transport.html"><div class="sicon">🚌</div><div><b data-k="transport">Transport</b><span data-k="transportD">Routes, timings & fares</span></div></a>
+<a class="small-card" href="https://www.facebook.com/sursandtoday" target="_blank" rel="noopener"><div class="sicon">📰</div><div><b>News &amp; Updates</b><span>Sursand Today</span></div></a>
+<a class="small-card" href="p/useful-websites.html"><div class="sicon">🌐</div><div><b data-k="websites">Useful Websites</b><span data-k="websitesD">Government & useful links</span></div></a>
+<a class="small-card" href="p/jobs.html"><div class="sicon">💼</div><div><b data-k="jobs">Jobs</b><span data-k="jobsD">Local & employment updates</span></div></a>
+<a class="small-card" href="p/weather.html"><div class="sicon">🌦️</div><div><b data-k="weather">Weather & Forecast</b><span data-k="weatherD">Weather and local information</span></div></a>
+</section>
+<section class="quick after-quick">
+<a class="qcard q7" href="p/business-registration.html"><div class="qicon">➕</div><div class="qtext"><b data-k="addBiz">Add Business / Service</b><span data-k="addBizD">Send registration directly to admin WhatsApp</span></div></a>
+<a class="qcard q8" href="p/change-makers.html"><div class="qicon">✨</div><div class="qtext"><b data-k="join">Join Community</b><span data-k="joinD">Become a Change Maker for Sursand</span></div></a>
+</section>
+
+</main>
+
+<nav class="sc-bottom">
+<a href="./">⌂<span data-k="home">Home</span></a>
+<a href="p/businesses.html">🏪<span data-k="shop">Shop</span></a>
+<a href="p/city-connect.html">💬<span>City Connect</span></a>
+<a href="p/events.html">📅<span data-k="events">Events</span></a>
+<a href="javascript:void(0)" onclick="openMenu()">☰<span data-k="menu">Menu</span></a>
+</nav>
+
+<div class="menu-sheet" id="menuSheet" onclick="if(event.target===this)closeMenu()"><div class="menu"><div class="handle"></div><div class="menu-head"><h3 data-k="menuTitle">☰ App Menu & Settings</h3><button onclick="closeMenu()">×</button></div>
+<div class="menu-grid">
+
+<a class="menu-card" href="p/my-complaints.html"><span>📣</span><i style="font-style:normal">My Complaints</i></a>
+<a class="menu-card" href="p/charity.html"><span>❤️</span><i style="font-style:normal">Charity & Donations</i></a>
+<a class="menu-card" href="p/city-connect.html"><span>💬</span><i style="font-style:normal">City Connect</i></a>
+<a class="menu-card" href="p/representatives.html"><span>👥</span><i style="font-style:normal">Representatives</i></a>
+<a class="menu-card" href="p/weather.html"><span>🌦️</span><i style="font-style:normal">Weather</i></a>
+<a class="menu-card" href="p/jobs.html"><span>💼</span><i style="font-style:normal">Jobs</i></a>
+
+<a class="menu-card" href="p/government-offices.html"><span>🏛️</span><i style="font-style:normal">Government Offices</i></a>
+<a class="menu-card" href="p/settings.html"><span>⚙️</span><i data-k="settings" style="font-style:normal">Settings</i></a>
+<a class="menu-card" href="p/notifications.html"><span>🔔</span><i data-k="notifications" style="font-style:normal">Notifications</i></a>
+<a class="menu-card" href="p/about.html"><span>ℹ️</span><i data-k="about" style="font-style:normal">About Sursand Connect</i></a>
+<a class="menu-card" href="p/contact.html"><span>✉️</span><i data-k="contact" style="font-style:normal">Contact Us</i></a>
+<button class="menu-card menu-full" onclick="shareApp()"><span>↗️</span><i data-k="share" style="font-style:normal">Share Sursand Connect App</i></button>
+</div>
+<div class="setting"><label data-k="language">Language</label><select id="lang" onchange="setLanguage(this.value)"><option value="en">English</option><option value="hi">हिन्दी</option></select></div>
+<div class="setting"><label data-k="theme">Theme</label><select id="theme" onchange="setTheme(this.value)"><option value="light">Light</option><option value="dark">Dark</option></select></div>
+</div></div>
+
+<script>
+const API='https://script.google.com/macros/s/AKfycbyjTV3BcPjYhXEDFlRhw0P-ZNDR7_k47N3emxak9ccgB2iHjUadognpyWUTBaZe07bu/exec';
+const T={
+ en:{welcome:'Welcome to Sursand',hero1:'Sursand,',hero2:'Connected in One Place.',heroDesc:'Discover local businesses, services, events, announcements, emergency contacts and your local community — all from Sursand Connect.',shopNow:'🛍️ Shop Now',bookServices:'🛠️ Book Services',complaints:'📣 Complaints',quickTitle:'Quick Services',quickSub:'Useful services for everyday life in Sursand',orderFood:'Order Food',orderFoodD:'Order food online and get delivered to your doorstep.',buyGrocery:'Buy Grocery',buyGroceryD:'Order grocery online and get delivered to your doorstep.',join:'Join Community',joinD:'Become a Change Maker for Sursand',addBiz:'Add Business / Service',addBizD:'Register a local business or service',charity:'Charity',charityD:'Donate money or request goods pickup',businesses:'Businesses',businessesD:'Find local shops and businesses',events:'Events',eventsD:'Local events, notices and announcements',emergency:'Emergency',emergencyD:'Important emergency helplines',health:'Healthcare',healthD:'Doctors, labs & medicine',education:'Education',educationD:'Schools & learning',representatives:'Representatives',repD:'Chairman, Vice Chairman & Ward Councillors',places:'Important Places',placesD:'Important local locations',transport:'Transport',transportD:'Routes, timings & fares',govt:'Government Offices',govtD:'Public offices & directions',websites:'Useful Websites',websitesD:'Government & useful links',jobs:'Jobs',jobsD:'Local & employment updates',weather:'Weather & Forecast',weatherD:'Current weather and forecast',news:'📰 News & Updates',loading:'Latest Sursand Updates',newsSub:'Latest local news from Sursand',newsFallback:'Local news and community updates will appear here.',home:'Home',shop:'Shop',services:'Services',menu:'Menu',menuTitle:'☰ App Menu & Settings',settings:'Settings',notifications:'Notifications',about:'About Sursand Connect',contact:'Contact Us',share:'Share Sursand Connect App',language:'Language',theme:'Theme'},
+ hi:{welcome:'सुरसंड में आपका स्वागत है',hero1:'सुरसंड,',hero2:'अब सब कुछ एक जगह।',heroDesc:'स्थानीय व्यवसाय, सेवाएं, कार्यक्रम, घोषणाएं, आपातकालीन संपर्क और समुदाय की उपयोगी जानकारी सुरसंड कनेक्ट पर पाएं।',shopNow:'🛍️ खरीदारी करें',bookServices:'🛠️ सेवा बुक करें',complaints:'📣 शिकायत',quickTitle:'त्वरित सेवाएं',quickSub:'सुरसंड में रोजमर्रा की उपयोगी सेवाएं',orderFood:'खाना ऑर्डर करें',orderFoodD:'ऑनलाइन खाना ऑर्डर करें और अपने घर तक डिलीवरी पाएं।',buyGrocery:'किराना सामग्री खरीदें',buyGroceryD:'ऑनलाइन किराना सामग्री मंगाएं और अपने घर तक डिलीवरी पाएं।',join:'समुदाय से जुड़ें',joinD:'सुरसंड के लिए चेंज मेकर बनें',addBiz:'व्यवसाय / सेवा जोड़ें',addBizD:'स्थानीय व्यवसाय या सेवा पंजीकृत करें',charity:'चैरिटी',charityD:'राशि दान करें या सामान पिकअप बुक करें',businesses:'व्यवसाय',businessesD:'स्थानीय दुकानें और व्यवसाय खोजें',events:'कार्यक्रम',eventsD:'स्थानीय कार्यक्रम, सूचना और घोषणाएं',emergency:'आपातकाल',emergencyD:'महत्वपूर्ण आपातकालीन हेल्पलाइन',health:'स्वास्थ्य सेवा',healthD:'डॉक्टर, जांच और दवा',education:'शिक्षा',educationD:'स्कूल और शिक्षण संस्थान',representatives:'प्रतिनिधि',repD:'मुख्य पार्षद, उपमुख्य पार्षद और वार्ड पार्षद',places:'महत्वपूर्ण स्थान',placesD:'स्थानीय महत्वपूर्ण स्थान',transport:'परिवहन',transportD:'रूट, समय और किराया',govt:'सरकारी कार्यालय',govtD:'सरकारी कार्यालय और दिशा',websites:'उपयोगी वेबसाइटें',websitesD:'सरकारी व उपयोगी लिंक',jobs:'नौकरियां',jobsD:'स्थानीय व रोजगार अपडेट',weather:'मौसम व पूर्वानुमान',weatherD:'वर्तमान मौसम और पूर्वानुमान',news:'📰 समाचार व अपडेट',loading:'नवीनतम अपडेट लोड हो रहे हैं...',newsSub:'सुरसंड के नवीनतम स्थानीय समाचार',newsFallback:'स्थानीय समाचार और सामुदायिक अपडेट यहां दिखाई देंगे।',home:'होम',shop:'दुकान',services:'सेवाएं',menu:'मेनू',menuTitle:'☰ ऐप मेनू और सेटिंग्स',settings:'सेटिंग्स',notifications:'सूचनाएं',about:'सुरसंड कनेक्ट के बारे में',contact:'संपर्क करें',share:'सुरसंड कनेक्ट ऐप साझा करें',language:'भाषा',theme:'थीम'}
+};
+function applyPrefs(){const l=localStorage.getItem('scLanguage')||'en',th=localStorage.getItem('scTheme')||'light';document.documentElement.lang=l;document.documentElement.classList.toggle('dark',th==='dark');document.querySelectorAll('[data-k]').forEach(el=>{const k=el.dataset.k;if(T[l][k])el.textContent=T[l][k]});const ph=document.querySelector('[data-ph="search"]');if(ph)ph.placeholder=l==='hi'?'पूरे ऐप में कुछ भी खोजें...':'Search anything across Sursand Connect...';const lg=document.getElementById('lang'),tm=document.getElementById('theme');if(lg)lg.value=l;if(tm)tm.value=th}
+function setLanguage(v){localStorage.setItem('scLanguage',v);applyPrefs();window.dispatchEvent(new Event('scLanguageChanged'))}
+function setTheme(v){localStorage.setItem('scTheme',v);applyPrefs()}
+function openMenu(){const x=document.getElementById('menuSheet');if(x)x.classList.add('active')}function closeMenu(){const x=document.getElementById('menuSheet');if(x)x.classList.remove('active')}
+function doSearch(e){e.preventDefault();const x=document.getElementById('homeSearch'),q=x?x.value.trim():'';if(q)location.href='p/search.html?q='+encodeURIComponent(q);return false}
+function shareApp(){const data={title:'Sursand Connect',text:'Sursand Connect - Your local digital community for Sursand.',url:new URL('./',location.href).href};if(navigator.share)navigator.share(data).catch(()=>{});else window.open('https://wa.me/?text='+encodeURIComponent(data.text+'\n\n'+data.url),'_blank')}
+function escapeHtml(v){return String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+document.addEventListener('DOMContentLoaded',()=>{applyPrefs()});
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
+</script>
+<script src="offline-data.js"></script>
+<script src="app-i18n.js"></script>
+<script src="app-i18n-extra.js"></script>
+
+
+<script src="home-popup.js"></script>
+<script src="app-notifications.js"></script>
+
+
+
+<script src="app-media.js"></script>
+<script src="universal-qr.js"></script>
+
+<script src="./app-enhancements.js"></script><script>
+(function(){
+ function cleanWa(u){u=String(u||'').trim();if(!u)return '';if(/^https?:\/\//i.test(u))return u;const n=u.replace(/\D/g,'');return n?'https://wa.me/'+n:''}
+ function bind(id,url,label){const a=document.getElementById(id);if(!a)return;a.onclick=function(e){e.preventDefault();const z=cleanWa(url);if(z)location.href=z;}}
+ async function loadCatalogues(){let d=null;try{d=window.SCReadAllDataCache&&window.SCReadAllDataCache()}catch(e){};let st=d&&d.settings||{};bind('orderFoodCard',st.orderFoodCatalogue,'Order Food');bind('buyGroceryCard',st.buyGroceryCatalogue,'Buy Grocery');try{const r=await fetch('https://script.google.com/macros/s/AKfycbyjTV3BcPjYhXEDFlRhw0P-ZNDR7_k47N3emxak9ccgB2iHjUadognpyWUTBaZe07bu/exec?action=settings&_='+Date.now(),{cache:'no-store'});const j=await r.json();const z=j&&j.data||{};bind('orderFoodCard',z.orderFoodCatalogue,'Order Food');bind('buyGroceryCard',z.buyGroceryCatalogue,'Buy Grocery')}catch(e){}}
+ loadCatalogues();
+})();
+</script></body>
+</html>

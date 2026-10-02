@@ -1,0 +1,184 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f28c28">
+<title>Add Business / Service | Sursand Connect</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;background:#f8fafc;color:#263238;font-family:Arial,sans-serif}body{padding-top:66px;padding-bottom:82px}
+.bar{position:fixed;top:0;left:0;right:0;height:58px;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:4px 12px;z-index:99;border-bottom:1px solid #eceff1;box-shadow:0 5px 18px rgba(15,23,42,.08)}
+.brand{display:flex;gap:9px;align-items:center;text-decoration:none;color:#263238}.brand img{width:41px;height:41px;border-radius:12px;object-fit:contain}.brand span{display:flex;flex-direction:column}.brand b{font-size:14px}.brand small{font-size:9px;color:#667085}
+.back{width:40px;height:40px;border-radius:14px;border:1px solid #f2d1ac;background:#fff0dd;color:#c86508;font-size:20px}
+.wrap{max-width:920px;margin:13px auto;padding:0 13px 35px}
+.hero{background:linear-gradient(135deg,#ff9d42,#f28c28,#e8740e);color:#fff;border-radius:20px;padding:21px 17px;box-shadow:0 12px 28px rgba(242,140,40,.18)}.hero h1{margin:0 0 5px;font-size:23px}.hero p{margin:0;font-size:10px;line-height:1.55}
+.choice{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin:18px 0}.choice button{min-height:120px;border:2px solid #fff;border-radius:20px;color:#fff;font-size:15px;font-weight:900;padding:14px;box-shadow:0 9px 0 rgba(15,23,42,.08),0 17px 25px rgba(15,23,42,.10)}.businessChoice{background:linear-gradient(145deg,#4fb7f3,#2563eb)}.serviceChoice{background:linear-gradient(145deg,#34a853,#238b45)}.choice small{display:block;font-size:9px;font-weight:600;margin-top:7px;opacity:.92}
+.formcard{display:none;background:#fff;border:1px solid #e6ebe7;border-radius:18px;padding:14px;margin-top:16px;box-shadow:0 8px 22px rgba(15,23,42,.07)}.formcard.open{display:block}.formhead{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}.formhead h2{margin:0;font-size:16px}.change{border:0;border-radius:9px;padding:7px 9px;background:#fff0dd;color:#b45309;font-size:8px;font-weight:900}
+.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.field{display:flex;flex-direction:column;gap:5px}.field.full{grid-column:1/-1}.field label{font-size:9px;font-weight:800}.field input,.field select,.field textarea{width:100%;border:1px solid #dfe5e1;border-radius:10px;padding:10px;background:#fff;color:#263238;font:inherit;font-size:10px}.field textarea{min-height:74px;resize:vertical}.submit{grid-column:1/-1;border:0;border-radius:11px;padding:12px;background:linear-gradient(145deg,#34a853,#238b45);color:#fff;font-size:10px;font-weight:900}.status{grid-column:1/-1;font-size:9px;line-height:1.45;min-height:14px}.status.ok{color:#176b35}.status.err{color:#b91c1c}
+.bottom{position:fixed;bottom:0;left:0;right:0;height:64px;background:linear-gradient(135deg,#34a853,#238b45 52%,#176b35);display:grid;grid-template-columns:repeat(5,1fr);z-index:99}.bottom a{color:#fff;text-decoration:none;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:18px}.bottom span{font-size:8px;font-weight:800}
+@media(max-width:600px){.formgrid{grid-template-columns:1fr}.field.full,.submit{grid-column:1}.choice{grid-template-columns:1fr}}
+</style><script src="../app-data.js"></script></head><body>
+<header class="bar"><a class="brand" href="../"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgM6ePTCVaqvhVtE9SqPzEyzrYrHjo0MlxUbzHS1D8ORCNX_at01YJcY6a7ltTxA2AaYEuojBw-VotVudZXLNUHVSs6xQvLX6zbNBh-bVnm0v6gURU0yStk_fObHB9rGNwbkf2v_GTyAmcwAG0m8srp0at1riLJSCvOLU3kFneNoNlX-C1XLbioi4RtmDfU/s1600/IMG_20260820_101456.png"><span><b>Sursand Connect</b><small>Add Business / Service</small></span></a><button class="back" onclick="history.length>1?history.back():location.href='../'">‹</button></header>
+<main class="wrap">
+<section class="hero"><h1>Add Business / Service</h1><p>Choose what you want to register.</p></section>
+
+<div class="choice" id="choice">
+  <button class="businessChoice" onclick="openBusiness()">🏪 Add Shop / Business<small>Register a local shop or business</small></button>
+  <button class="serviceChoice" onclick="openService()">🛠️ Add Service<small>Register yourself as a service provider</small></button>
+</div>
+
+<section class="formcard" id="businessWrap">
+  <div class="formhead"><h2>🏪 Shop / Business Registration</h2><button class="change" onclick="showChoice()">Change Type</button></div>
+  <form id="businessForm" class="formgrid">
+    <div class="field"><label>Shop / Business Name *</label><input id="bName" required></div>
+    <div class="field"><label>Business Category *</label><select id="bCategory" required><option value="">Select Business Category</option><option>Grocery & General Store</option><option>Clothing & Garments</option><option>Footwear</option><option>Jewellery</option><option>Cosmetics & Beauty Products</option><option>Mobile & Accessories</option><option>Computer & IT</option><option>Electronics & Appliances</option><option>Electrical Shop</option><option>Hardware & Sanitary</option><option>Building Materials</option><option>Paint & Decoration</option><option>Furniture & Furnishing</option><option>Restaurant & Food</option><option>Sweets & Bakery</option><option>Tea, Snacks & Refreshments</option><option>Dairy & Milk Products</option><option>Fruits & Vegetables</option><option>Medical Store & Pharmacy</option><option>Books & Stationery</option><option>Gifts & Toys</option><option>Home & Kitchen</option><option>Agriculture & Farm Supplies</option><option>Animal Feed & Veterinary Supplies</option><option>Cycle & Accessories</option><option>Automobile & Spare Parts</option><option>Fuel & Lubricants</option><option>Automobile Repair & Workshop</option><option>Photography & Studio</option><option>Printing & Digital Services</option><option>Salon & Grooming</option><option>Gym & Fitness</option><option>Hotel & Lodge</option><option>Transport & Logistics</option><option>Travel & Ticketing</option><option>Banking & Financial Services</option><option>Insurance Services</option><option>Real Estate & Property</option><option>Flowers & Decoration</option><option>Wedding & Event Services</option><option>Tailoring & Boutique</option><option>Optical Store</option><option>Religious & Puja Items</option><option>Other Shops & Businesses</option></select></div>
+    <div class="field"><label>Owner / Contact Person</label><input id="bOwner"></div>
+    <div class="field"><label>Mobile Number *</label><input id="bPhone" inputmode="numeric" required></div>
+    <div class="field"><label>WhatsApp Number</label><input id="bWhatsapp" inputmode="numeric"></div>
+    <div class="field"><label>Ward</label><select id="bWard"><option value="">Select Ward</option><option>Ward 1</option><option>Ward 2</option><option>Ward 3</option><option>Ward 4</option><option>Ward 5</option><option>Ward 6</option><option>Ward 7</option><option>Ward 8</option><option>Ward 9</option><option>Ward 10</option><option>Ward 11</option><option>Ward 12</option><option>Ward 13</option><option>Ward 14</option><option>Ward 15</option><option>Ward 16</option><option>Ward 17</option><option>Ward 18</option></select></div>
+    <div class="field full"><label>Address</label><textarea id="bAddress"></textarea></div>
+    <div class="field full"><label>Business Description</label><textarea id="bDescription"></textarea></div>
+    <div class="field"><label>WhatsApp Catalogue Link</label><input id="bCatalogue"></div>
+    <div class="field full">
+      <label>Location</label>
+      <input id="bMap" type="hidden">
+      <div class="sc-location-row">
+        <button type="button" class="mini gps" id="bDetectLocation">📍 Detect Location</button>
+        <button type="button" class="mini maps" id="bSelectLocation">🗺️ Select Location</button>
+      </div>
+      <small id="bLocationStatus" style="font-size:8px;color:#667085"></small>
+    </div>
+    <div class="field full"><label data-en="Business / Shop Image" data-hi="व्यवसाय / दुकान की फोटो">Business / Shop Image</label><input id="bImage" type="file" accept="image/*"></div>
+    <button class="submit" type="submit">Submit Business Registration</button>
+    <div id="bStatus" class="status"></div>
+  </form>
+</section>
+
+<section class="formcard" id="serviceWrap">
+  <div class="formhead"><h2>🛠️ Service Provider Registration</h2><button class="change" onclick="showChoice()">Change Type</button></div>
+  <form id="serviceForm" class="formgrid">
+    <div class="field"><label>Service Provider Name *</label><input id="sName" required></div>
+    <div class="field"><label>Service Category *</label><select id="sCategory" required><option value="">Select Service Category</option><option>Mason</option><option>Construction Labour</option><option>Carpenter</option><option>Plumber</option><option>Electrician</option><option>Welder</option><option>Painter</option><option>Tile / Marble Fitter</option><option>POP / False Ceiling Worker</option><option>Aluminium / Glass Worker</option><option>Borewell / Water Pump Mechanic</option><option>Key Maker / Locksmith</option><option>Septic Tank / Toilet Tank Cleaner</option><option>Drain / Sewer Cleaner</option><option>House Cleaner</option><option>Pest Control Service</option><option>Snake Rescuer</option><option>Gardener / Mali</option><option>Tree Cutting / Trimming Service</option><option>Domestic Help / Maid</option><option>CCTV Technician</option><option>AC Technician</option><option>Refrigerator Technician</option><option>Washing Machine Technician</option><option>Cooler Technician</option><option>RO / Water Purifier Technician</option><option>TV Technician</option><option>Mobile Repair Technician</option><option>Computer / Laptop Technician</option><option>Printer / Photocopier Technician</option><option>Internet / Wi-Fi Technician</option><option>DTH / Dish TV Technician</option><option>Bike Mechanic</option><option>Car Mechanic</option><option>Auto / E-rickshaw Mechanic</option><option>Tractor Mechanic</option><option>Tyre / Puncture Repair</option><option>Driver</option><option>Cycle Repair</option><option>Rickshaw / Cart Service</option><option>Loader / Goods Labour</option><option>Packers & Movers</option><option>Local Goods Delivery</option><option>Milkman / Milk Delivery</option><option>Newspaper Delivery</option><option>Drinking Water / Water Jar Delivery</option><option>LPG / Gas Delivery Contact</option><option>Cook</option><option>Caterer</option><option>Waiter / Event Helper</option><option>Tent House Service</option><option>Decoration Service</option><option>Lighting Decoration</option><option>DJ / Sound Service</option><option>Band / Music Service</option><option>Photographer</option><option>Videographer</option><option>Makeup Artist</option><option>Mehndi Artist</option><option>Tailor</option><option>Laundry / Dhobi</option><option>Barber / Home Haircut</option><option>Private Tutor / Home Tutor</option><option>Tractor / Rotavator Service</option><option>Harvester / Farm Machinery Service</option><option>Pandit Ji / Purohit</option></select></div>
+    <div class="field"><label>Mobile Number *</label><input id="sPhone" inputmode="numeric" required></div>
+    <div class="field"><label>WhatsApp Number</label><input id="sWhatsapp" inputmode="numeric"></div>
+    <div class="field full"><label>Service Description *</label><textarea id="sDescription" required></textarea></div><div class="field full"><label>Address</label><textarea id="sAddress"></textarea></div><div class="field"><label>Ward</label><input id="sWard" placeholder="Ward"></div><div class="field full"><label>Location</label><input id="sMap" type="hidden"><div class="sc-location-row"><button type="button" class="mini gps" id="sDetectLocation">📍 Detect Location</button><button type="button" class="mini maps" id="sSelectLocation">🗺️ Select Location</button></div><small id="sLocationStatus" style="font-size:8px;color:#667085"></small></div>
+    <div class="field"><label>Experience</label><select id="sExperience"><option value="">Select Experience</option><option>Less than 1 year</option><option>1 year</option><option>2 years</option><option>3 years</option><option>4 years</option><option>5 years</option><option>6 years</option><option>7 years</option><option>8 years</option><option>9 years</option><option>10 years</option><option>More than 10 years</option></select></div>
+    <div class="field full"><label data-en="Service Provider Image" data-hi="सेवा प्रदाता की फोटो">Service Provider Image</label><input id="sImage" type="file" accept="image/*"></div>
+    <button class="submit" type="submit">Submit Service Registration</button>
+    <div id="sStatus" class="status"></div>
+  </form>
+</section>
+</main>
+<nav class="bottom"><a href="../">⌂<span>Home</span></a><a href="businesses.html">🏪<span>Shop</span></a><a href="services.html">🛠️<span>Services</span></a><a href="events.html">📅<span>Events</span></a><a href="settings.html">☰<span>Menu</span></a></nav>
+<script>
+const API="https://script.google.com/macros/s/AKfycbyjTV3BcPjYhXEDFlRhw0P-ZNDR7_k47N3emxak9ccgB2iHjUadognpyWUTBaZe07bu/exec";
+function fileData(file){return new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result);r.onerror=rej;r.readAsDataURL(file)})}
+async function post(data){const r=await fetch(API,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(data)});const x=await r.json();if(!x||!x.success)throw Error(x&&x.error?x.error:'Submission failed.');return x}
+function showChoice(){choice.style.display='grid';businessWrap.classList.remove('open');serviceWrap.classList.remove('open')}
+function openBusiness(){choice.style.display='none';businessWrap.classList.add('open');serviceWrap.classList.remove('open');if(window.SCAccountUI)SCAccountUI.autofill(businessWrap)}
+function openService(){choice.style.display='none';businessWrap.classList.remove('open');serviceWrap.classList.add('open');if(window.SCAccountUI)SCAccountUI.autofill(serviceWrap)}
+async function imagePayload(input){
+ const f=input&&input.files&&input.files[0];if(!f)return {};
+ if(f.size>4*1024*1024)throw Error((localStorage.getItem('scLanguage')==='hi'?'फोटो 4 MB से कम रखें।':'Please use an image smaller than 4 MB.'));
+ const data=await fileData(f);return {imageBase64:data,imageName:f.name,imageMimeType:f.type||'image/jpeg'}
+}
+businessForm.addEventListener('submit',async e=>{
+ e.preventDefault();bStatus.className='status';bStatus.textContent=(localStorage.getItem('scLanguage')==='hi'?'अनुरोध भेजा जा रहा है...':'Submitting request...');
+ try{
+  const img=await imagePayload(bImage);
+  const d={action:'registerBusiness',businessName:bName.value,'Business Name':bName.value,'Business Category':bCategory.value,'Owner Name':bOwner.value,'Contact Number':bPhone.value,'WhatsApp Number':bWhatsapp.value,'Ward':bWard.value,'Address':bAddress.value,'Description':bDescription.value,'WhatsApp Catalogue Link':bCatalogue.value,'Location':bMap.value,...img};
+  await post(d);bStatus.className='status ok';bStatus.textContent=(localStorage.getItem('scLanguage')==='hi'?'अनुरोध एडमिन को भेज दिया गया है। स्वीकृति के बाद व्यवसाय लाइव होगा।':'Request sent to Admin. The business will go live after approval.');businessForm.reset();
+ }catch(err){bStatus.className='status err';bStatus.textContent=err.message||'Submission failed.'}
+});
+serviceForm.addEventListener('submit',async e=>{
+ e.preventDefault();sStatus.className='status';sStatus.textContent=(localStorage.getItem('scLanguage')==='hi'?'अनुरोध भेजा जा रहा है...':'Submitting request...');
+ try{
+  const img=await imagePayload(sImage);
+  const d={action:'registerService',servicePersonName:sName.value,'Service Person Name':sName.value,serviceType:sCategory.value,'Service Type':sCategory.value,phone:sPhone.value,'Contact Number':sPhone.value,whatsapp:sWhatsapp.value,'WhatsApp Number':sWhatsapp.value,ward:sWard.value,address:sAddress.value,description:sDescription.value,'Work Description':sDescription.value,experience:sExperience.value,'Years of Experience':sExperience.value,location:sMap.value,'Location':sMap.value,...img};
+  await post(d);sStatus.className='status ok';sStatus.textContent=(localStorage.getItem('scLanguage')==='hi'?'अनुरोध एडमिन को भेज दिया गया है। स्वीकृति के बाद सेवा लाइव होगी।':'Request sent to Admin. The service will go live after approval.');serviceForm.reset();
+ }catch(err){sStatus.className='status err';sStatus.textContent=err.message||'Submission failed.'}
+});</script>
+
+<script src="../app-i18n.js"></script><script src="../app-i18n-extra.js"></script><script src="../app-media.js"></script>
+<style>
+.sc-location-row{display:flex;gap:8px;flex-wrap:wrap}
+.sc-location-row button{border:0;border-radius:10px;padding:9px 10px;font-size:9px;font-weight:900;color:#fff}
+.sc-location-row .gps{background:#238b45}.sc-location-row .maps{background:#2563eb}
+</style>
+<script>
+(function(){
+  const hidden=document.getElementById("bMap");
+  const status=document.getElementById("bLocationStatus");
+  const detect=document.getElementById("bDetectLocation");
+  const select=document.getElementById("bSelectLocation");
+  if(!hidden||!status||!detect||!select)return;
+  function setLocation(lat,lng){
+    hidden.value=String(lat)+","+String(lng);
+    status.textContent=(localStorage.getItem('scLanguage')==='hi'?'स्थान चुना गया':'Location selected');
+  }
+  detect.onclick=function(){
+    if(!navigator.geolocation){status.textContent="Location is not supported on this device.";return}
+    status.textContent="Detecting location...";
+    navigator.geolocation.getCurrentPosition(
+      p=>setLocation(p.coords.latitude,p.coords.longitude),
+      ()=>status.textContent="Unable to detect location. Please allow location permission.",
+      {enableHighAccuracy:true,timeout:12000}
+    );
+  };
+  select.onclick=function(){
+    status.textContent=(localStorage.getItem('scLanguage')==='hi'?'स्थान प्राप्त किया जा रहा है...':'Getting location...');
+    if(!navigator.geolocation){window.open('https://www.google.com/maps','_blank');return}
+    navigator.geolocation.getCurrentPosition(function(p){setLocation(p.coords.latitude,p.coords.longitude);window.open('https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(p.coords.latitude+','+p.coords.longitude),'_blank')},function(){window.open('https://www.google.com/maps','_blank')},{enableHighAccuracy:true,timeout:12000});
+  };
+})();
+</script>
+<script>
+(function(){
+    const hidden=document.getElementById("sMap"),status=document.getElementById("sLocationStatus"),detect=document.getElementById("sDetectLocation"),select=document.getElementById("sSelectLocation"); if(!hidden||!status||!detect||!select)return;
+    function setLoc(p){hidden.value=p.coords.latitude+","+p.coords.longitude;status.textContent=(localStorage.getItem('scLanguage')==='hi'?'स्थान चुना गया':'Location selected');}
+    detect.onclick=function(){navigator.geolocation&&navigator.geolocation.getCurrentPosition(setLoc,()=>status.textContent='Unable to detect location.',{enableHighAccuracy:true,timeout:12000})};
+    select.onclick=function(){SCMapPicker.open(hidden,status)};
+})();
+</script>
+<script>
+(function scFocusRequestedResult(){
+  const q=new URLSearchParams(location.search).get('focus'); if(!q)return;
+  const needle=decodeURIComponent(q).trim().toLowerCase(); if(!needle)return;
+  let tries=0; const timer=setInterval(function(){
+    tries++; const nodes=[...document.querySelectorAll('article,.card,[class*=card],tr,li')];
+    const hit=nodes.find(el=>(el.innerText||'').toLowerCase().includes(needle));
+    if(hit){clearInterval(timer);hit.scrollIntoView({behavior:'smooth',block:'center'});hit.style.outline='3px solid #f28c28';hit.style.outlineOffset='3px';setTimeout(()=>{hit.style.outline='';hit.style.outlineOffset=''},3500)}
+    else if(tries>20)clearInterval(timer);
+  },250);
+})();
+</script><script>(function(){window.alert=function(msg){let x=document.getElementById('scInlineToast');if(!x){x=document.createElement('div');x.id='scInlineToast';x.style.cssText='position:fixed;left:50%;bottom:84px;transform:translateX(-50%);z-index:3000000;background:#263238;color:#fff;padding:10px 14px;border-radius:12px;max-width:88vw;font:700 11px Arial;box-shadow:0 8px 24px #0004';document.body.appendChild(x)}x.textContent=String(msg||'');x.style.display='block';clearTimeout(window.__scToastT);window.__scToastT=setTimeout(()=>x.style.display='none',2800)}})();</script><script src="../app-location-picker.js"></script><script src="../app-enhancements.js"></script><script src="../universal-qr.js"></script><script>
+(function(){
+ const M={
+ 'Add Business or Service':'व्यवसाय या सेवा जोड़ें','Choose what you want to register on Sursand Connect.':'सुरसंड कनेक्ट पर क्या पंजीकृत करना चाहते हैं, चुनें।',
+ 'Add Business / Shop':'व्यवसाय / दुकान जोड़ें','Add Service Provider':'सेवा प्रदाता जोड़ें','Business / Shop Registration':'व्यवसाय / दुकान पंजीकरण',
+ 'Service Provider Registration':'सेवा प्रदाता पंजीकरण','Change Type':'प्रकार बदलें','Business / Shop Name *':'व्यवसाय / दुकान का नाम *',
+ 'Business / Shop Name (Hindi)':'व्यवसाय / दुकान का नाम (हिंदी)','Business Category *':'व्यवसाय श्रेणी *','Business Category (Hindi)':'व्यवसाय श्रेणी (हिंदी)',
+ 'Contact Person Name *':'संपर्क व्यक्ति का नाम *','Contact Person Name (Hindi)':'संपर्क व्यक्ति का नाम (हिंदी)','Business Description *':'व्यवसाय विवरण *',
+ 'Business Description (Hindi)':'व्यवसाय विवरण (हिंदी)','WhatsApp Catalogue Link':'व्हाट्सऐप कैटलॉग लिंक','Submit Business Registration':'व्यवसाय पंजीकरण अनुरोध भेजें',
+ 'Service Provider Name *':'सेवा प्रदाता का नाम *','Service Provider Name (Hindi)':'सेवा प्रदाता का नाम (हिंदी)','Service Category *':'सेवा श्रेणी *',
+ 'Service Category (Hindi)':'सेवा श्रेणी (हिंदी)','Service Description *':'सेवा विवरण *','Service Description (Hindi)':'सेवा विवरण (हिंदी)',
+ 'Select Experience':'अनुभव चुनें','Submit Service Registration':'सेवा पंजीकरण अनुरोध भेजें','Business / Shop Image':'व्यवसाय / दुकान की फोटो',
+ 'Service Provider Image':'सेवा प्रदाता की फोटो','Mobile Number *':'मोबाइल नंबर *','Contact Number *':'संपर्क नंबर *','WhatsApp Number':'व्हाट्सऐप नंबर',
+ 'Address':'पता','Address *':'पता *','Address (Hindi)':'पता (हिंदी)','Ward':'वार्ड','Ward *':'वार्ड *','Location':'स्थान','Experience':'अनुभव',
+ 'Detect Location':'वर्तमान स्थान लें','Select Location':'स्थान चुनें','Select Ward':'वार्ड चुनें','Select Category':'श्रेणी चुनें','Select Service':'सेवा चुनें',
+ 'Submit':'भेजें','Back':'वापस','Close':'बंद करें'
+ };
+ const P={'Enter business name':'व्यवसाय का नाम दर्ज करें','Enter name in Hindi':'हिंदी में नाम दर्ज करें','Enter mobile number':'मोबाइल नंबर दर्ज करें',
+ 'Enter WhatsApp number':'व्हाट्सऐप नंबर दर्ज करें','Enter address':'पता दर्ज करें','Describe your business':'अपने व्यवसाय का विवरण लिखें',
+ 'Enter service provider name':'सेवा प्रदाता का नाम दर्ज करें','Describe the service':'सेवा का विवरण लिखें'};
+ function apply(){
+   if((localStorage.getItem('scLanguage')||'en')!=='hi')return;
+   document.documentElement.lang='hi';
+   document.querySelectorAll('[data-hi]').forEach(el=>{if(el.dataset.hi)el.textContent=el.dataset.hi});
+   document.querySelectorAll('label,h1,h2,h3,p,button,option,span,small,b').forEach(el=>{const t=(el.textContent||'').trim();if(M[t]&&el.textContent!==M[t])el.textContent=M[t]});
+   document.querySelectorAll('input,textarea').forEach(el=>{const x=(el.getAttribute('placeholder')||'').trim();if(P[x])el.setAttribute('placeholder',P[x])});
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply);else apply();
+ window.addEventListener("storage",apply);
+ document.addEventListener("change",function(e){if(e.target&&/language/i.test(e.target.id||""))setTimeout(apply,0)});
+ setTimeout(apply,50);setTimeout(apply,300);document.addEventListener('click',function(e){if(e.target&&/business|service|type/i.test((e.target.id||'')+' '+(e.target.className||'')))setTimeout(apply,30)});
+})();
+</script></body></html>

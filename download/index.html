@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0c9b61">
+<title>Download Sursand Connect</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:22px;font-family:Arial,sans-serif;background:linear-gradient(145deg,#fff7ed,#effaf5);color:#17324d}.card{width:min(430px,100%);background:#fff;border-radius:26px;padding:32px 24px;box-shadow:0 18px 55px #1232;text-align:center}.brand{font-size:30px;font-weight:900;color:#0b7a4b;letter-spacing:.3px}.tag{margin:9px 0 24px;color:#64748b;line-height:1.45}.btn{width:100%;border:0;border-radius:15px;padding:15px 18px;font-size:17px;font-weight:800;color:#fff;background:linear-gradient(135deg,#ff8a00,#0c9b61);cursor:pointer}.btn:disabled{opacity:.55;cursor:not-allowed}.status{min-height:22px;margin-top:14px;font-size:13px;color:#64748b}.small{margin-top:20px;font-size:12px;line-height:1.45;color:#94a3b8}</style>
+</head>
+<body>
+<main class="card">
+  <div class="brand">SURSAND CONNECT</div>
+  <div class="tag">सुरसंड की स्थानीय सेवाएँ और जानकारी, एक ही ऐप में</div>
+  <button id="downloadBtn" class="btn" disabled>Loading latest app…</button>
+  <div id="status" class="status">Latest APK link is being checked.</div>
+  <div class="small">Android APK • Latest link is controlled from Admin App Settings</div>
+</main>
+<script>
+const API='https://script.google.com/macros/s/AKfycbyjTV3BcPjYhXEDFlRhw0P-ZNDR7_k47N3emxak9ccgB2iHjUadognpyWUTBaZe07bu/exec?action=settings';
+const btn=document.getElementById('downloadBtn'), status=document.getElementById('status');
+function apkUrl(data){
+  if(!data||typeof data!=='object') return '';
+  return data.appApkUrl||data.APP_APK_URL||data.SET031||data['App APK Download URL']||'';
+}
+fetch(API,{cache:'no-store'})
+ .then(r=>{if(!r.ok) throw new Error('HTTP '+r.status);return r.json()})
+ .then(j=>{
+   const d=(j&&j.data)||j||{}; const url=apkUrl(d);
+   if(!url) throw new Error('APK URL not configured');
+   btn.disabled=false; btn.textContent='Download Sursand Connect APK';
+   status.textContent='Latest version is ready to download.';
+   btn.onclick=()=>{ window.location.href=url; };
+ })
+ .catch(()=>{
+   btn.disabled=true; btn.textContent='Download temporarily unavailable';
+   status.textContent='APK link is not configured yet. Add it in Admin App Settings (SET031).';
+ });
+</script>
+</body>
+</html>

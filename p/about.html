@@ -1,0 +1,1546 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#e97712"><title>About | Sursand Connect</title><link rel="manifest" href="../manifest.webmanifest"><style>
+:root{--sc-saffron:#f28c28;--sc-saffron-dark:#d86f0d;--sc-green:#238b45;--sc-text:#263238;--sc-bg:#f8fafc;--sc-card:#fff;--sc-border:#e6ebe7}
+html,body{margin:0;background:var(--sc-bg);color:var(--sc-text)}body{padding-top:66px;padding-bottom:118px;transition:background .2s,color .2s}.sc-appbar{position:fixed;top:0;left:0;right:0;height:58px;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);border-bottom:1px solid #eceff1;box-shadow:0 5px 18px rgba(15,23,42,.08);display:flex;align-items:center;justify-content:space-between;padding:4px 12px;z-index:999999;font-family:Arial,sans-serif}.sc-appbar-left{display:flex;align-items:center;gap:8px;min-width:0}.sc-back{width:38px;height:38px;border:1px solid #f2d5b6;background:linear-gradient(145deg,#fff8f0,#fff0dd);color:#c86508;border-radius:14px;font-size:21px;font-weight:900;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(200,101,8,.10);cursor:pointer}.sc-appbar-brand{display:flex;gap:9px;align-items:center;text-decoration:none;color:#263238;min-width:0}.sc-appbar-brand img{width:41px;height:41px;object-fit:contain;border-radius:12px;box-shadow:0 3px 10px rgba(15,23,42,.08)}.sc-appbar-brand span{display:flex;flex-direction:column;line-height:1.08;min-width:0}.sc-appbar-brand b{font-size:14px;white-space:nowrap}.sc-appbar-brand small{font-size:9px;color:#667085;margin-top:3px;white-space:nowrap}.sc-appbar-actions{display:flex;gap:6px}.sc-appbar-actions a,.sc-appbar-actions button{width:36px;height:36px;border-radius:12px;border:1px solid #f0d7bd;background:#fff7ed;color:#c86508;font-weight:900;font-size:17px;display:flex;align-items:center;justify-content:center;text-decoration:none;cursor:pointer;position:relative}.sc-bell-dot{position:absolute;top:6px;right:6px;width:7px;height:7px;background:#dc2626;border:2px solid #fff;border-radius:50%}.sc-bottom{position:fixed;bottom:0;left:0;right:0;height:64px;background:linear-gradient(135deg,#f7a13f,#f28c28 52%,#e97812);backdrop-filter:blur(10px);border-top:1px solid #e6e9ec;display:grid;grid-template-columns:repeat(5,1fr);z-index:999999;box-shadow:0 -5px 18px rgba(15,23,42,.07);font-family:Arial,sans-serif}.sc-bottom a{text-decoration:none;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:18px;gap:1px}.sc-bottom a span{font-size:8px;font-weight:800}.sc-bottom a:hover,.sc-bottom a:active{color:#fff;background:rgba(255,255,255,.12)}.sc-bottom .sc-menu-lines{font-size:21px;line-height:1;font-weight:900}.sc-menu-sheet{display:none;position:fixed;inset:0;background:rgba(15,23,42,.45);z-index:1000000;align-items:flex-end;justify-content:center}.sc-menu-sheet.active{display:flex}.sc-menu-panel{width:min(560px,100%);max-height:82vh;overflow:auto;background:var(--sc-card);border-radius:24px 24px 0 0;padding:12px 14px 24px;box-shadow:0 -16px 40px rgba(15,23,42,.22);font-family:Arial,sans-serif}.sc-menu-handle{width:46px;height:4px;border-radius:999px;background:#d7dce0;margin:0 auto 12px}.sc-menu-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.sc-menu-head h3{margin:0;font-size:16px}.sc-menu-close{width:34px;height:34px;border:0;border-radius:10px;background:#f1f5f3;font-size:18px}.sc-menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.sc-menu-card{border:1px solid var(--sc-border);background:#fff;border-radius:15px;padding:13px;text-decoration:none;color:#263238;box-shadow:0 5px 14px rgba(15,23,42,.06);font-size:11px;font-weight:800}.sc-menu-card span{display:block;font-size:20px;margin-bottom:5px}.sc-menu-full{grid-column:1/-1}.sc-setting-row{display:flex;justify-content:space-between;align-items:center;gap:12px;border:1px solid var(--sc-border);background:#fff;border-radius:15px;padding:12px;margin-top:10px}.sc-setting-row label{font-size:11px;font-weight:800}.sc-setting-row select,.sc-setting-row button{border:1px solid #e0e5e2;background:#f8faf8;border-radius:10px;padding:8px 10px;font-size:10px}.sc-login-btn{width:100%;margin-top:12px;border:0;border-radius:13px;background:linear-gradient(135deg,#f7a13f,#f28c28,#e97812);color:#fff;padding:12px;font-weight:900}.sc-dark body{background:#0f172a;color:#e5e7eb}.sc-dark .sc-appbar,.sc-dark .sc-bottom,.sc-dark .sc-menu-panel{background:#111827;color:#f8fafc;border-color:#263244}.sc-dark .sc-appbar-brand{color:#fff}.sc-dark .sc-appbar-brand small{color:#a9b2c2}.sc-dark .sc-menu-card,.sc-dark .sc-setting-row{background:#1f2937;color:#fff;border-color:#374151}.sc-dark [class*="card"],.sc-dark [class*="panel"]{border-color:#374151}.sc-dark .sc-appbar-actions a,.sc-dark .sc-appbar-actions button,.sc-dark .sc-back{background:#2a2119;color:#ffb86b;border-color:#70451e}.sc-dark main{color:#e5e7eb}.sc-dark main [class*="card"],.sc-dark main [class*="panel"],.sc-dark main [class*="dialog"],.sc-dark main [class*="modal-content"],.sc-dark main [class*="body"]{background-color:#111827!important;color:#e5e7eb!important;border-color:#374151!important}.sc-dark main h1,.sc-dark main h2,.sc-dark main h3,.sc-dark main h4{color:#f8fafc}.sc-dark main p,.sc-dark main [class*="info"],.sc-dark main [class*="muted"],.sc-dark main [class*="subtitle"],.sc-dark main [class*="description"]{color:#cbd5e1}.sc-dark input,.sc-dark textarea,.sc-dark select{background:#1f2937!important;color:#f8fafc!important;border-color:#475569!important}@media(min-width:900px){body{padding-bottom:0}.sc-bottom{display:none}}
+/* v10.4 green bottom */
+.sc-bottom{background:linear-gradient(135deg,#34a853,#238b45 52%,#176b35)!important}
+</style><script>
+function scRootUrl(){return new URL('../',location.href).href;}
+function scShareApp(){const data={title:'Sursand Connect',text:'Sursand Connect - Your local digital community for Sursand.',url:scRootUrl()};if(navigator.share){navigator.share(data).catch(()=>{});}else{window.open('https://wa.me/?text='+encodeURIComponent(data.text+'\n\n'+data.url),'_blank');}}
+function scGoBack(){if(history.length>1){history.back()}else{location.href='../'}}
+function scOpenMenu(){document.getElementById('scMenuSheet').classList.add('active')}
+function scCloseMenu(){document.getElementById('scMenuSheet').classList.remove('active')}
+function scSetTheme(v){localStorage.setItem('scTheme',v);scApplyPrefs()}
+function scSetLanguage(v){localStorage.setItem('scLanguage',v);scApplyPrefs()}
+function scApplyPrefs(){
+ const theme=localStorage.getItem('scTheme')||'light';
+ document.documentElement.classList.toggle('sc-dark',theme==='dark');
+ const lang=localStorage.getItem('scLanguage')||'en';
+ document.documentElement.lang=lang;
+ document.querySelectorAll('[data-en][data-hi]').forEach(el=>{
+   const en=el.getAttribute('data-en'),hi=el.getAttribute('data-hi');
+   if(el.tagName==='INPUT'||el.tagName==='TEXTAREA'){el.placeholder=lang==='hi'?hi:en}
+   else el.textContent=lang==='hi'?hi:en;
+ });
+ const ts=document.getElementById('scThemeSelect');if(ts)ts.value=theme;
+ const ls=document.getElementById('scLanguageSelect');if(ls)ls.value=lang;
+}
+document.addEventListener('DOMContentLoaded',scApplyPrefs);
+</script>
+<style>
+.sc-pretty-back{
+  width:40px!important;height:40px!important;border-radius:14px!important;
+  border:1px solid #f2d1ac!important;
+  background:linear-gradient(145deg,#fffaf5,#fff0dd)!important;
+  color:#c86508!important;
+  box-shadow:0 5px 14px rgba(200,101,8,.14)!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  padding:0!important;transition:.18s ease!important;
+}
+.sc-pretty-back:active{transform:scale(.94)!important}
+body{padding-bottom:126px!important}
+main{padding-bottom:54px!important}
+@media(min-width:900px){body{padding-bottom:30px!important}}
+</style>
+<script src="../app-data.js"></script></head><body>
+<div class="sc-appbar">
+<div class="sc-appbar-left">
+  <a href="../" class="sc-appbar-brand">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgM6ePTCVaqvhVtE9SqPzEyzrYrHjo0MlxUbzHS1D8ORCNX_at01YJcY6a7ltTxA2AaYEuojBw-VotVudZXLNUHVSs6xQvLX6zbNBh-bVnm0v6gURU0yStk_fObHB9rGNwbkf2v_GTyAmcwAG0m8srp0at1riLJSCvOLU3kFneNoNlX-C1XLbioi4RtmDfU/s1600/IMG_20260820_101456.png" alt="Sursand Connect">
+    <span><b>Sursand Connect</b><small data-en="Your Local Digital Community" data-hi="आपका स्थानीय डिजिटल समुदाय">Your Local Digital Community</small></span>
+  </a>
+</div>
+<div class="sc-appbar-actions">
+  <a href="notifications.html" aria-label="Notifications" title="Notifications">🔔<i class="sc-bell-dot"></i></a>
+  <button class="sc-back sc-pretty-back" onclick="history.length>1?history.back():location.href='../'" aria-label="Back" title="Back">
+<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+</div>
+</div>
+<main style="padding-bottom:44px"><!-- =========================================================
+     POST 22 — ABOUT SURSAND CONNECT
+     FULL REPLACEMENT
+     ========================================================= -->
+
+<div id="sc-about-page">
+
+<style>
+
+#sc-about-page{
+  --green:#238b45;
+  --green-dark:#176b35;
+  --green-soft:#eaf7ed;
+
+  --saffron:#f28c28;
+  --saffron-dark:#d86f0d;
+  --saffron-soft:#fff0dd;
+
+  --blue:#2563eb;
+  --blue-dark:#1d4ed8;
+  --blue-soft:#eef4ff;
+
+  --purple:#7c3aed;
+  --purple-soft:#f3edff;
+
+  --yellow:#f4c430;
+  --yellow-soft:#fff8dc;
+
+  --text:#263238;
+  --muted:#667085;
+  --border:#e6ebe7;
+
+  max-width:1100px;
+  margin:26px auto;
+  padding:0 16px 50px;
+
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+}
+
+#sc-about-page *{
+  box-sizing:border-box;
+}
+
+
+/* =========================================================
+   SAFFRON HERO
+   ========================================================= */
+
+.sc-ab-hero{
+  position:relative;
+  overflow:hidden;
+
+  background:linear-gradient(
+    135deg,
+    #f7a13f 0%,
+    #f28c28 50%,
+    #e97812 100%
+  );
+
+  color:#fff;
+
+  padding:42px 24px;
+
+  border-radius:22px;
+
+  margin-bottom:24px;
+
+  text-align:center;
+
+  box-shadow:
+    0 14px 34px rgba(90,60,20,.16);
+}
+
+.sc-ab-hero::before{
+  content:"";
+
+  position:absolute;
+
+  width:180px;
+  height:180px;
+
+  left:-75px;
+  top:-85px;
+
+  border-radius:50%;
+
+  background:
+    rgba(255,255,255,.07);
+}
+
+.sc-ab-hero::after{
+  content:"";
+
+  position:absolute;
+
+  width:220px;
+  height:220px;
+
+  right:-85px;
+  bottom:-110px;
+
+  border-radius:50%;
+
+  background:
+    rgba(255,255,255,.08);
+}
+
+.sc-ab-hero h1{
+  position:relative;
+  z-index:2;
+
+  margin:0 0 10px;
+
+  color:#fff;
+
+  font-size:
+    clamp(30px,5vw,43px);
+
+  font-weight:800;
+}
+
+.sc-ab-hero p{
+  position:relative;
+  z-index:2;
+
+  max-width:800px;
+
+  margin:auto;
+
+  color:
+    rgba(255,255,255,.95);
+
+  font-size:14px;
+
+  line-height:1.7;
+}
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.sc-ab-section{
+  position:relative;
+
+  overflow:hidden;
+
+  background:#fff;
+
+  padding:24px;
+
+  border:
+    1px solid var(--border);
+
+  border-top:
+    4px solid var(--saffron);
+
+  border-radius:19px;
+
+  margin-bottom:21px;
+
+  box-shadow:
+    0 8px 25px rgba(31,55,42,.07);
+}
+
+.sc-ab-section::after{
+  content:"";
+
+  position:absolute;
+
+  width:110px;
+  height:110px;
+
+  right:-50px;
+  top:-52px;
+
+  border-radius:50%;
+
+  background:
+    rgba(242,140,40,.045);
+}
+
+.sc-ab-section h2{
+  position:relative;
+  z-index:2;
+
+  margin:0 0 12px;
+
+  color:var(--text);
+
+  font-size:23px;
+
+  font-weight:800;
+}
+
+.sc-ab-section p{
+  position:relative;
+  z-index:2;
+
+  margin:0 0 12px;
+
+  color:var(--muted);
+
+  line-height:1.75;
+
+  font-size:13px;
+}
+
+.sc-ab-section p:last-child{
+  margin-bottom:0;
+}
+
+
+/* =========================================================
+   PURPOSE CARDS
+   ========================================================= */
+
+.sc-ab-grid{
+  position:relative;
+  z-index:2;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,minmax(0,1fr));
+
+  gap:16px;
+
+  margin-top:18px;
+}
+
+.sc-ab-card{
+  min-height:180px;
+
+  padding:18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #fff9f1
+    );
+
+  border:
+    1px solid #eee5db;
+
+  border-top:
+    4px solid var(--saffron);
+
+  border-radius:16px;
+
+  box-shadow:
+    0 5px 16px rgba(31,55,42,.05);
+
+  transition:.2s ease;
+}
+
+.sc-ab-card:nth-child(2){
+  border-top-color:var(--green);
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f3fbf5
+    );
+}
+
+.sc-ab-card:nth-child(3){
+  border-top-color:var(--blue);
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f5f8ff
+    );
+}
+
+.sc-ab-card:hover{
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 10px 22px rgba(31,55,42,.09);
+}
+
+.sc-ab-icon{
+  width:54px;
+  height:54px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  margin-bottom:10px;
+
+  border-radius:15px;
+
+  background:var(--saffron-soft);
+
+  font-size:28px;
+}
+
+.sc-ab-card:nth-child(2)
+.sc-ab-icon{
+  background:var(--green-soft);
+}
+
+.sc-ab-card:nth-child(3)
+.sc-ab-icon{
+  background:var(--blue-soft);
+}
+
+.sc-ab-card h3{
+  margin:0 0 7px;
+
+  color:var(--text);
+
+  font-size:17px;
+
+  font-weight:800;
+}
+
+.sc-ab-card p{
+  margin:0;
+
+  font-size:12px;
+
+  line-height:1.65;
+}
+
+
+/* =========================================================
+   FEATURE GRID
+   ========================================================= */
+
+.sc-ab-features{
+  position:relative;
+  z-index:2;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,minmax(0,1fr));
+
+  gap:12px;
+
+  margin-top:17px;
+}
+
+.sc-ab-feature{
+  display:flex;
+
+  align-items:flex-start;
+
+  gap:11px;
+
+  min-height:105px;
+
+  padding:14px;
+
+  background:#f9fbfa;
+
+  border:
+    1px solid #edf0ee;
+
+  border-radius:13px;
+
+  color:var(--muted);
+
+  font-size:11px;
+
+  line-height:1.6;
+
+  transition:.18s ease;
+}
+
+.sc-ab-feature:hover{
+  background:#fffaf3;
+
+  border-color:#f1d9ba;
+}
+
+.sc-ab-feature-icon{
+  width:42px;
+  height:42px;
+
+  flex-shrink:0;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:12px;
+
+  background:var(--saffron-soft);
+
+  font-size:22px;
+}
+
+.sc-ab-feature strong{
+  display:block;
+
+  margin-bottom:3px;
+
+  color:var(--text);
+
+  font-size:12px;
+}
+
+
+/* =========================================================
+   HIGHLIGHT
+   ========================================================= */
+
+.sc-ab-highlight{
+  position:relative;
+  z-index:2;
+
+  background:#fff8e8;
+
+  border-left:
+    5px solid var(--saffron);
+
+  padding:17px;
+
+  border-radius:11px;
+
+  margin-top:17px;
+
+  color:var(--muted);
+
+  line-height:1.7;
+
+  font-size:12px;
+}
+
+.sc-ab-highlight strong{
+  color:var(--text);
+}
+
+
+/* =========================================================
+   CHANGE MAKERS
+   ========================================================= */
+
+.sc-ab-change{
+  border-top-color:var(--green);
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f5fcf7
+    );
+}
+
+.sc-ab-change-box{
+  position:relative;
+  z-index:2;
+
+  display:grid;
+
+  grid-template-columns:
+    120px 1fr;
+
+  align-items:center;
+
+  gap:20px;
+
+  margin-top:8px;
+}
+
+.sc-ab-change-icon{
+  width:110px;
+  height:110px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #e8f8ed,
+      #d7f0df
+    );
+
+  font-size:52px;
+
+  box-shadow:
+    0 7px 18px rgba(35,139,69,.10);
+}
+
+.sc-ab-change-text h3{
+  margin:0 0 7px;
+
+  color:var(--green-dark);
+
+  font-size:20px;
+}
+
+.sc-ab-change-text p{
+  margin:0;
+
+  font-size:12px;
+}
+
+
+/* =========================================================
+   VALUES / GOALS
+   ========================================================= */
+
+.sc-ab-goals{
+  position:relative;
+  z-index:2;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(5,minmax(0,1fr));
+
+  gap:10px;
+
+  margin-top:17px;
+}
+
+.sc-ab-goal{
+  padding:13px 8px;
+
+  text-align:center;
+
+  background:#fff;
+
+  border:
+    1px solid var(--border);
+
+  border-radius:13px;
+}
+
+.sc-ab-goal span{
+  display:block;
+
+  margin-bottom:5px;
+
+  font-size:25px;
+}
+
+.sc-ab-goal strong{
+  color:var(--text);
+
+  font-size:10px;
+}
+
+
+/* =========================================================
+   FREE BUSINESS REGISTRATION
+   ========================================================= */
+
+.sc-ab-business{
+  border-top-color:var(--blue);
+}
+
+.sc-ab-business-note{
+  position:relative;
+  z-index:2;
+
+  margin-top:15px;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,minmax(0,1fr));
+
+  gap:9px;
+}
+
+.sc-ab-business-action{
+  padding:11px 8px;
+
+  border-radius:11px;
+
+  text-align:center;
+
+  font-size:10px;
+
+  font-weight:700;
+}
+
+.sc-ab-business-action:nth-child(1){
+  background:#eaf7ed;
+
+  color:var(--green-dark);
+}
+
+.sc-ab-business-action:nth-child(2){
+  background:#f3edff;
+
+  color:#6d28d9;
+}
+
+.sc-ab-business-action:nth-child(3){
+  background:#eef4ff;
+
+  color:var(--blue-dark);
+}
+
+.sc-ab-business-action:nth-child(4){
+  background:#fff8dc;
+
+  color:#725600;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width:900px){
+
+  .sc-ab-grid{
+    grid-template-columns:
+      repeat(2,minmax(0,1fr));
+  }
+
+  .sc-ab-goals{
+    grid-template-columns:
+      repeat(3,minmax(0,1fr));
+  }
+
+}
+
+
+@media(max-width:700px){
+
+  .sc-ab-change-box{
+    grid-template-columns:1fr;
+
+    text-align:center;
+  }
+
+  .sc-ab-change-icon{
+    margin:auto;
+  }
+
+}
+
+
+@media(max-width:600px){
+
+  #sc-about-page{
+    margin-top:18px;
+
+    padding-left:12px;
+    padding-right:12px;
+  }
+
+
+  .sc-ab-hero{
+    padding:30px 18px;
+
+    border-radius:18px;
+  }
+
+
+  .sc-ab-hero p{
+    font-size:12px;
+  }
+
+
+  .sc-ab-section{
+    padding:19px;
+  }
+
+
+  .sc-ab-grid,
+  .sc-ab-features{
+    grid-template-columns:1fr;
+  }
+
+
+  .sc-ab-goals{
+    grid-template-columns:
+      repeat(2,minmax(0,1fr));
+  }
+
+
+  .sc-ab-business-note{
+    grid-template-columns:
+      repeat(2,minmax(0,1fr));
+  }
+
+}
+
+
+@media(max-width:400px){
+
+  .sc-ab-goals,
+  .sc-ab-business-note{
+    grid-template-columns:1fr;
+  }
+
+}
+
+</style>
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section class="sc-ab-hero">
+
+  <h1>
+    🌆 About Sursand Connect
+  </h1>
+
+  <p>
+    A local digital platform designed to bring useful
+    information, local services, community connections
+    and digital facilities of Sursand together in one place.
+  </p>
+
+</section>
+
+
+<!-- =========================================================
+     WHAT IS SURSAND CONNECT
+     ========================================================= -->
+
+<section class="sc-ab-section">
+
+  <h2>
+    🌐 What is Sursand Connect?
+  </h2>
+
+
+  <p>
+    Sursand Connect is a community-focused digital platform
+    created for the people of Sursand. Its purpose is to make
+    useful local information and services easier to discover,
+    access and use from a mobile phone or computer.
+  </p>
+
+
+  <p>
+    Instead of searching at many different places, residents
+    can use Sursand Connect to find shops and businesses,
+    local workers, healthcare services, schools, transport,
+    government offices, important places, public contacts,
+    weather, agriculture information, events and many other
+    useful resources from one platform.
+  </p>
+
+</section>
+
+
+<!-- =========================================================
+     OUR PURPOSE
+     ========================================================= -->
+
+<section class="sc-ab-section">
+
+  <h2>
+    🎯 Our Purpose
+  </h2>
+
+
+  <div class="sc-ab-grid">
+
+
+    <article class="sc-ab-card">
+
+      <div class="sc-ab-icon">
+        📍
+      </div>
+
+      <h3>
+        Local Information
+      </h3>
+
+      <p>
+        Make useful and important information about
+        Sursand easier for residents to find.
+      </p>
+
+    </article>
+
+
+    <article class="sc-ab-card">
+
+      <div class="sc-ab-icon">
+        🤝
+      </div>
+
+      <h3>
+        Community Connection
+      </h3>
+
+      <p>
+        Help people connect with local businesses,
+        services, representatives and community resources.
+      </p>
+
+    </article>
+
+
+    <article class="sc-ab-card">
+
+      <div class="sc-ab-icon">
+        📱
+      </div>
+
+      <h3>
+        Smart Digital Access
+      </h3>
+
+      <p>
+        Make everyday local information and services
+        easily accessible through a simple mobile-friendly platform.
+      </p>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     FEATURES
+     ========================================================= -->
+
+<section class="sc-ab-section">
+
+  <h2>
+    📲 What You Can Find on Sursand Connect
+  </h2>
+
+
+  <div class="sc-ab-features">
+
+
+    <!-- BUSINESS -->
+
+    <div class="sc-ab-feature">
+
+      <div class="sc-ab-feature-icon">
+        🏪
+      </div>
+
+      <div>
+
+        <strong>
+          Shops &amp; Businesses
+        </strong>
+
+        Discover local shops and businesses,
+        call directly, shop through available catalogues
+        and get directions.
+
+      </div>
+
+    </div>
+
+
+    <!-- SERVICES -->
+
+    <div class="sc-ab-feature">
+
+      <div class="sc-ab-feature-icon">
+        🛠️
+      </div>
+
+      <div>
+
+        <strong>
+          Local Service Persons
+        </strong>
+
+        Find electricians, plumbers, masons,
+        carpenters, welders and other skilled service persons.
+
+      </div>
+
+    </div>
+
+
+    <!-- HEALTH -->
+
+    <div class="sc-ab-feature">
+
+      <div class="sc-ab-feature-icon">
+        🏥
+      </div>
+
+      <div>
+
+        <strong>
+          Healthcare
+        </strong>
+
+        Find hospitals, clinics, doctors,
+        diagnostic services and medicine-related facilities.
+
+      </div>
+
+    </div>
+
+
+    <!-- EDUCATION -->
+
+    <div class="sc-ab-feature">
+
+      <div class="sc-ab-feature-icon">
+        🎓
+      </div>
+
+      <div>
+
+        <strong>
+          Schools &amp; Education
+        </strong>
+
+        Explore schools, educational institutions
+        and useful education-related information.
+
+      </div>
+
+    </div>
+
+
+    <!-- TRANSPORT -->
+
+    <div class="sc-ab-feature">
+
+      <div class="sc-ab-feature-icon">
+        🚌
+      </div>
+
+      <div>
+
+        <strong>
+          Transport Information
+        </strong>
+
+        Find buses and other transport options,
+        routes, stops, timings and available fare information.
+
+      </div>
+
+    </div>
+
+
+    <!-- EMERGENCY -->
+
+    <div class="sc-ab-feature">
+
+      <div class="sc-ab-feature-icon">
+        🚨
+      </div>
+
+      <div>
+
+        <strong>
+          Emergency &amp; Important Contacts
+        </strong>
+
+        Quickly access useful emergency,
+        public-service and important contact numbers.
+
+      </div>
+
+    </div>
+
+
+    <!-- GOVERNMENT OFFICES -->
+
+    <div class="sc-ab-feature">
+
+      <div class="sc-ab-feature-icon">
+        🏛️
+      </div>
+
+      <div>
+
+        <strong>
+          Government Offices
+        </strong>
+
+        Find government offices, contact information
+        and directions to important public offices.
+
+      </div>
+
+    </div>
+
+
+    <!-- GOVERNMENT SERVICES -->
+
+    <div class="sc-ab-feature">
+
+      <div class="sc-ab-feature-icon">
+        📜
+      </div>
+
+      <div>
+
+        <strong>
+          Government Services
+        </strong>
+
+        Access information about government services,
+        schemes, certificates and official portals.
+
+      </div>
+
+    </div>
+
+
+    <!-- IMPORTANT PLACES -->
+
+    <div class="sc-ab-feature">
+
+      <div class="sc-ab-feature-icon">
+        📍
+      </div>
+
+      <div>
+
+        <strong>
+          Important Places
+        </strong>
+
+        Explore useful places and landmarks
+        with information and Google Maps directions.
+
+      </div>
+
+    </div>
+
+
+    <!-- LOCAL MAP -->
+
+    <div class="sc-ab-feature">
+
+      <div class="sc-ab-feature-icon">
+        🗺️
+      </div>
+
+      <div>
+
+        <strong>
+          Sursand Local Map
+        </strong>
+
+        Explore Sursand and surrounding areas
+        through the interactive local map.
+
+      </div>
+
+    </div>
+
+
+    <!-- EVENTS -->
+
+    <div class="sc-ab-feature">
+
+      <div class="sc-ab-feature-icon">
+        📅
+      </div>
+
+      <div>
+
+        <strong>
+          Events &amp; Announcements
+        </strong>
+
+        Stay informed about festivals, fairs,
+        camps, campaigns, programmes and local announcements.
+
+      </div>
+
+    </div>
+
+
+    <!-- WHATSAPP -->
+
+    <div class="sc-ab-feature">
+
+      <div class="sc-ab-feature-icon">
+        💬
+      </div>
+
+      <div>
+
+        <strong>
+          City Connect WhatsApp Community
+        </strong>
+
+        Join the main City Connect community
+        and ward-based WhatsApp groups.
+
+      </div>
+
+    </div>
+
+
+    <!-- REPRESENTATIVES -->
+
+    <div class="sc-ab-feature">
+
+      <div class="sc-ab-feature-icon">
+        👥
+      </div>
+
+      <div>
+
+        <strong>
+          Ward Representatives
+        </strong>
+
+        Find Chairman, Vice Chairman and
+        all Ward Councillors with direct contact options.
+
+      </div>
+
+    </div>
+
+
+    <!-- WEATHER -->
+
+    <div class="sc-ab-feature">
+
+      <div class="sc-ab-feature-icon">
+        🌤️
+      </div>
+
+      <div>
+
+        <strong>
+          Weather &amp; Local Information
+        </strong>
+
+        View current Sursand weather,
+        forecast, temperature trends and useful local information.
+
+      </div>
+
+    </div>
+
+
+    <!-- AGRICULTURE -->
+
+    <div class="sc-ab-feature">
+
+      <div class="sc-ab-feature-icon">
+        🌾
+      </div>
+
+      <div>
+
+        <strong>
+          Agriculture &amp; Farmers
+        </strong>
+
+        Access useful agricultural services,
+        farmer resources and related information.
+
+      </div>
+
+    </div>
+
+
+    <!-- LINKS -->
+
+    <div class="sc-ab-feature">
+
+      <div class="sc-ab-feature-icon">
+        🔗
+      </div>
+
+      <div>
+
+        <strong>
+          Useful Websites
+        </strong>
+
+        Quickly open Bihar Government,
+        Government of India, public-service
+        and popular online shopping websites.
+
+      </div>
+
+    </div>
+
+
+    <!-- CHARITY -->
+
+    <div class="sc-ab-feature">
+
+      <div class="sc-ab-feature-icon">
+        ❤️
+      </div>
+
+      <div>
+
+        <strong>
+          Charity
+        </strong>
+
+        Access charitable initiatives,
+        donation facilities and available
+        doorstep goods-donation services.
+
+      </div>
+
+    </div>
+
+
+    <!-- NOTIFICATIONS -->
+
+    <div class="sc-ab-feature">
+
+      <div class="sc-ab-feature-icon">
+        🔔
+      </div>
+
+      <div>
+
+        <strong>
+          Notifications &amp; Updates
+        </strong>
+
+        Receive and access important
+        local notices, alerts and updates.
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     BUSINESS
+     ========================================================= -->
+
+<section class="sc-ab-section sc-ab-business">
+
+  <h2>
+    🏪 For Local Shops &amp; Businesses
+  </h2>
+
+
+  <p>
+    Local shops and businesses can submit their information
+    for registration on Sursand Connect. Business registration
+    is free and listings are published after review and approval.
+  </p>
+
+
+  <p>
+    Business owners can provide their shop/business details,
+    image, contact information, catalogue and exact location
+    so residents can discover them more easily.
+  </p>
+
+
+  <div class="sc-ab-business-note">
+
+
+    <div class="sc-ab-business-action">
+      📞 Call
+    </div>
+
+
+    <div class="sc-ab-business-action">
+      🧺 Shop Now
+    </div>
+
+
+    <div class="sc-ab-business-action">
+      ℹ️ Information
+    </div>
+
+
+    <div class="sc-ab-business-action">
+      📍 Location
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CHANGE MAKERS
+     ========================================================= -->
+
+<section class="sc-ab-section sc-ab-change">
+
+  <h2>
+    🌟 Change Makers Community
+  </h2>
+
+
+  <div class="sc-ab-change-box">
+
+
+    <div class="sc-ab-change-icon">
+      🌟
+    </div>
+
+
+    <div class="sc-ab-change-text">
+
+      <h3>
+        Together for a Better Sursand
+      </h3>
+
+
+      <p>
+        The Change Makers Community brings together people
+        who want to contribute their ideas, time, skills and
+        positive efforts towards improving Sursand.
+      </p>
+
+
+      <p>
+        The vision is to encourage citizen participation
+        and collective action to make Sursand
+        <strong>
+          smart, clean, green, beautiful and a model town.
+        </strong>
+      </p>
+
+    </div>
+
+
+  </div>
+
+
+  <div class="sc-ab-goals">
+
+
+    <div class="sc-ab-goal">
+      <span>🧹</span>
+      <strong>Clean</strong>
+    </div>
+
+
+    <div class="sc-ab-goal">
+      <span>🌳</span>
+      <strong>Green</strong>
+    </div>
+
+
+    <div class="sc-ab-goal">
+      <span>✨</span>
+      <strong>Beautiful</strong>
+    </div>
+
+
+    <div class="sc-ab-goal">
+      <span>💡</span>
+      <strong>Smart</strong>
+    </div>
+
+
+    <div class="sc-ab-goal">
+      <span>🏙️</span>
+      <strong>Model Town</strong>
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     COMMUNITY PARTICIPATION
+     ========================================================= -->
+
+<section class="sc-ab-section">
+
+  <h2>
+    🤝 Community Participation
+  </h2>
+
+
+  <p>
+    Sursand Connect is designed to become more useful
+    through responsible community participation.
+    Residents can help by sharing accurate local information,
+    informing us about updates and participating in constructive
+    initiatives for the town.
+  </p>
+
+
+  <p>
+    People who want to actively contribute towards the
+    improvement of Sursand can join the
+    <strong>Change Makers Community</strong>.
+  </p>
+
+
+  <div class="sc-ab-highlight">
+
+    <strong>
+      Our Goal:
+    </strong>
+
+    Bring useful information, local services and community
+    participation together through technology while encouraging
+    collective efforts to make Sursand a smarter,
+    cleaner, greener, more beautiful and model town.
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     PRINCIPLE
+     ========================================================= -->
+
+<section class="sc-ab-section">
+
+  <h2>
+    💡 Our Approach
+  </h2>
+
+
+  <p>
+    Sursand Connect aims to remain simple, useful and
+    easy to access. The platform focuses on practical
+    information and services that can make everyday life
+    easier for residents while strengthening the connection
+    between citizens, businesses, services and the community.
+  </p>
+
+
+  <div class="sc-ab-highlight">
+
+    📱 <strong>Built for Sursand.</strong>
+    Designed to be mobile-friendly today and suitable
+    for expansion into a dedicated mobile application in the future.
+
+  </div>
+
+</section>
+
+</div></main>
+<nav class="sc-bottom"><a href="../">⌂<span data-sc-nav data-en="Home" data-hi="होम">Home</span></a><a href="businesses.html">🏪<span data-sc-nav data-en="Shop" data-hi="दुकान">Shop</span></a><a href="city-connect.html">💬<span data-sc-nav data-en="City Connect" data-hi="सिटी कनेक्ट">City Connect</span></a><a href="events.html">📅<span data-sc-nav data-en="Events" data-hi="कार्यक्रम">Events</span></a><a href="javascript:void(0)" onclick="scOpenMenu()"><b class="sc-menu-lines">☰</b><span data-sc-nav data-en="Menu" data-hi="मेनू">Menu</span></a></nav>
+<div class="sc-menu-sheet" id="scMenuSheet" onclick="if(event.target===this)scCloseMenu()"><div class="sc-menu-panel"><div class="sc-menu-handle"></div><div class="sc-menu-head"><h3>☰ App Menu & Settings</h3><button class="sc-menu-close" onclick="scCloseMenu()">×</button></div><div class="sc-menu-grid"><a class="sc-menu-card" href="complaints.html"><span>📣</span>My Complaints</a><a class="sc-menu-card" href="charity.html"><span>❤️</span>Charity &amp; Donations</a><a class="sc-menu-card" href="city-connect.html"><span>💬</span>City Connect</a><a class="sc-menu-card" href="representatives.html"><span>👥</span>Representatives</a><a class="sc-menu-card" href="government-offices.html"><span>🏛️</span>Government Offices</a><a class="sc-menu-card" href="weather.html"><span>🌦️</span>Weather</a><a class="sc-menu-card" href="jobs.html"><span>💼</span>Jobs</a><a class="sc-menu-card" href="settings.html"><span>⚙️</span>All Settings</a><a class="sc-menu-card" href="notifications.html"><span>🔔</span>Notifications</a><a class="sc-menu-card" href="about.html"><span>ℹ️</span>About Sursand Connect</a><a class="sc-menu-card" href="contact.html"><span>✉️</span>Contact Us</a><button class="sc-menu-card sc-menu-full" onclick="scShareApp()"><span>↗️</span>Share Sursand Connect App</button></div><div class="sc-setting-row"><label>Language</label><select id="scLanguageSelect" onchange="scSetLanguage(this.value)"><option value="en">English</option><option value="hi">हिन्दी</option></select></div><div class="sc-setting-row"><label>Theme</label><select id="scThemeSelect" onchange="scSetTheme(this.value)"><option value="light">Light</option><option value="dark">Dark</option></select></div></div></div>
+<script>if('serviceWorker' in navigator)navigator.serviceWorker.register('../sw.js').catch(()=>{});</script><script src="../offline-data.js"></script>
+<script src="../app-i18n.js"></script>
+<script src="../app-i18n-extra.js"></script>
+
+
+<script src="../app-notifications.js"></script>
+<script src="../app-media.js"></script>
+<div class="sc-v16-love"><div>❤️ Made with love for citizen of Sursand by</div><strong>Vikram Bhardwaj</strong></div><style>.sc-v16-love{margin:28px auto;max-width:650px;text-align:center;padding:18px 20px;border-radius:22px;background:linear-gradient(135deg,#fff7ed,#f0fdf4);border:1px solid #f2d7b8;box-shadow:0 10px 28px rgba(15,23,42,.08);font:800 14px/1.5 Arial,sans-serif;color:#39433e}.sc-v16-love div{display:block}.sc-v16-love strong{display:block;margin-top:5px;font-size:19px;letter-spacing:.02em;color:#b45309}</style><script>
+(function scFocusRequestedResult(){
+  const q=new URLSearchParams(location.search).get('focus'); if(!q)return;
+  const needle=decodeURIComponent(q).trim().toLowerCase(); if(!needle)return;
+  let tries=0; const timer=setInterval(function(){
+    tries++; const nodes=[...document.querySelectorAll('article,.card,[class*=card],tr,li')];
+    const hit=nodes.find(el=>(el.innerText||'').toLowerCase().includes(needle));
+    if(hit){clearInterval(timer);hit.scrollIntoView({behavior:'smooth',block:'center'});hit.style.outline='3px solid #f28c28';hit.style.outlineOffset='3px';setTimeout(()=>{hit.style.outline='';hit.style.outlineOffset=''},3500)}
+    else if(tries>20)clearInterval(timer);
+  },250);
+})();
+</script><script>(function(){window.alert=function(msg){let x=document.getElementById('scInlineToast');if(!x){x=document.createElement('div');x.id='scInlineToast';x.style.cssText='position:fixed;left:50%;bottom:84px;transform:translateX(-50%);z-index:3000000;background:#263238;color:#fff;padding:10px 14px;border-radius:12px;max-width:88vw;font:700 11px Arial;box-shadow:0 8px 24px #0004';document.body.appendChild(x)}x.textContent=String(msg||'');x.style.display='block';clearTimeout(window.__scToastT);window.__scToastT=setTimeout(()=>x.style.display='none',2800)}})();</script><script src="../app-enhancements.js"></script><script src="../universal-qr.js"></script></body></html>
