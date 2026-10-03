@@ -21,7 +21,7 @@ const API='https://script.google.com/macros/s/AKfycbwpMVP0rN61F7uVL1znqycdLCZ-Dl
 const btn=document.getElementById('downloadBtn'), status=document.getElementById('status');
 function apkUrl(data){
   if(!data||typeof data!=='object') return '';
-  return data.appApkUrl||data.APP_APK_URL||data.SET031||data['App APK Download URL']||'';
+  return data.APP_APK_URL||data.appApkUrl||data.SET031||data['App APK Download URL']||'';
 }
 fetch(API,{cache:'no-store'})
  .then(r=>{if(!r.ok) throw new Error('HTTP '+r.status);return r.json()})
@@ -34,7 +34,7 @@ fetch(API,{cache:'no-store'})
  })
  .catch(()=>{
    btn.disabled=true; btn.textContent='Download temporarily unavailable';
-   status.textContent='APK link is not configured yet. Add it in Admin App Settings (SET031).';
+   status.textContent='APK link is not configured yet. In Admin App Settings add Setting Key APP_APK_URL and paste the direct APK URL as Setting Value.';
  });
 </script>
 </body>
