@@ -37,38 +37,4 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 })();
 
 
-/* v51 universal phone/contact picker */
-(function(){
- function phoneField(el){const lab=el.id?document.querySelector('label[for="'+el.id+'"]'):null;const parent=el.closest&&el.closest('.field,.form-group,.input-group');const k=((el.id||'')+' '+(el.name||'')+' '+(el.placeholder||'')+' '+(lab?lab.textContent:'')+' '+(parent?parent.textContent.slice(0,80):'')).toLowerCase();return /phone|mobile|whatsapp|contact number|फोन|मोबाइल|व्हाट्स/.test(k)}
- function clean(v){return String(v||'').replace(/[^\d+]/g,'')}
- window.SCReceiveContact=function(target,number){
-   const el=document.getElementById(target)||document.querySelector('[name="'+String(target).replace(/"/g,'')+'"]')||(window.__scContactTarget&&document.getElementById(window.__scContactTarget));
-   if(el){el.value=String(number||'').trim();el.dispatchEvent(new Event('input',{bubbles:true}));el.dispatchEvent(new Event('change',{bubbles:true}));el.focus()}
- };
- window.scReceiveContact=window.SCReceiveContact;
- window.SCOpenContact=async function(el){
-   if(window.__scContactOpening)return;window.__scContactOpening=true;setTimeout(()=>window.__scContactOpening=false,700);
-   if(!el)return;if(!el.id)el.id='scPhone_'+Date.now()+'_'+Math.floor(Math.random()*10000);
-   const target=el.id;window.__scContactTarget=target;
-   try{
-     if(window.SursandNative&&typeof window.SursandNative.pickContact==='function'){window.SursandNative.pickContact(target);return}
-     if(window.SursandAndroid&&typeof window.SursandAndroid.pickContact==='function'){window.SursandAndroid.pickContact(target);return}
-     if(navigator.contacts&&typeof navigator.contacts.select==='function'){const a=await navigator.contacts.select(['tel'],{multiple:false});const n=a&&a[0]&&a[0].tel&&a[0].tel[0];if(n){window.SCReceiveContact(target,n);return}}
-   }catch(err){if(err&&err.name==='AbortError')return}
-   if(window.SCToast)SCToast(localStorage.getItem('scLanguage')==='hi'?'इस ब्राउज़र में संपर्क चयन उपलब्ध नहीं है।':'Contact selection is not supported by this browser.');
- };
- function add(){
-   document.querySelectorAll('input').forEach(el=>{
-     if(!phoneField(el)||el.dataset.scContactReady)return;
-     el.dataset.scContactReady='1';
-     const wrap=document.createElement('span');wrap.className='sc-contact-wrap';
-     el.parentNode.insertBefore(wrap,el);wrap.appendChild(el);
-     const b=document.createElement('button');b.type='button';b.className='sc-contact-pick';b.title='Choose from contacts';b.innerHTML='👤';b.onclick=()=>SCOpenContact(el);wrap.appendChild(b);
-   });
- }
- const st=document.createElement('style');st.textContent='.sc-contact-wrap{display:flex!important;gap:7px!important;align-items:stretch!important;width:100%}.sc-contact-wrap>input{flex:1!important;min-width:0!important}.sc-contact-pick{width:44px!important;min-width:44px!important;border:0!important;border-radius:12px!important;background:#eef5ff!important;color:#1465c0!important;font-size:18px!important;box-shadow:0 4px 12px #0b4d8b18!important}';document.head.appendChild(st);
- if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',add);else add();
- new MutationObserver(add).observe(document.documentElement,{childList:true,subtree:true});
-})();
-
-try{document.querySelectorAll('.sc-contact-pick').forEach(function(x){x.remove()})}catch(_){}
+/* Contact picker removed permanently. Phone/WhatsApp numbers are entered manually. */

@@ -11,3 +11,14 @@ async function check(){const cached=window.SCReadAllDataCache&&window.SCReadAllD
 function hook(){document.querySelectorAll('a[href$="notifications.html"]').forEach(a=>a.addEventListener('click',mark))}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>{hook();check()});else{hook();check()}window.addEventListener('sursand-data-updated',check);window.SCNotificationCheck=check;
 })();
+
+;(()=>{
+ function isCMWelcomeText(t){return /change\s*maker|changemaker/i.test(String(t||''))&&/welcome|स्वागत/i.test(String(t||''))}
+ function clean(){
+   document.querySelectorAll('[class*="notification"],article,.card,li').forEach(el=>{
+     if(isCMWelcomeText(el.innerText||'')) el.remove();
+   });
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',clean);else clean();
+ new MutationObserver(clean).observe(document.documentElement,{childList:true,subtree:true});
+})();
